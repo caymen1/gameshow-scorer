@@ -926,12 +926,12 @@
             </ul>
 
             <div class="auto-refresh-info">
-                📡 This page auto-refreshes every 10 seconds to show the latest scores
+                📡 This page auto-refreshes every 5 seconds to show the latest scores
             </div>
         </div>
 
         <div class="footer">
-            <p>Scan your QR code anytime to view your latest scores</p>
+            <!-- Footer removed - QR code message obsolete -->
         </div>
     </div>
 
@@ -1019,8 +1019,20 @@
             // Disable input and button
             document.getElementById('answerInput').disabled = true;
             document.getElementById('answerSubmitBtn').disabled = true;
+            
+            // Show immediate feedback - don't wait for Firebase
+            const statusDiv = document.getElementById('answerStatus');
+            const answerForm = document.getElementById('answerForm');
+            
+            if (statusDiv) {
+                statusDiv.className = 'answer-status submitted';
+                statusDiv.style.display = 'block';
+                statusDiv.innerHTML = `
+                    <div style="font-size: 1.2em; margin-bottom: 15px;">📤 Submitting...</div>
+                `;
+            }
 
-            // Save answer to Firebase
+            // Save answer to Firebase (async - don't block UI)
             try {
                 // Include question number in path for multi-question rounds
                 const answerPath = questionsInRound > 1 
@@ -1045,17 +1057,14 @@
                 if (response.ok) {
                     console.log('✅ Answer submitted successfully');
                     
-                    // Hide the answer form (check if it exists first)
-                    const answerForm = document.getElementById('answerForm');
+                    // Hide the answer form
                     if (answerForm) {
                         answerForm.style.display = 'none';
                     }
                     
                     // Show success status with submitted answer
-                    const statusDiv = document.getElementById('answerStatus');
                     if (statusDiv) {
                         statusDiv.className = 'answer-status submitted';
-                        statusDiv.style.display = 'block';
                         statusDiv.innerHTML = `
                             <div style="font-size: 1.2em; margin-bottom: 15px;">✓ Answer Submitted!</div>
                             <div class="submitted-answer-display" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 10px;">
@@ -1072,11 +1081,15 @@
             } catch (error) {
                 console.error('❌ Error submitting answer:', error);
                 alert('Failed to submit answer. Please try again.');
-                // Re-enable input (with null checks)
+                // Re-enable input
                 const answerInput = document.getElementById('answerInput');
                 const submitBtn = document.getElementById('answerSubmitBtn');
                 if (answerInput) answerInput.disabled = false;
                 if (submitBtn) submitBtn.disabled = false;
+                // Hide status
+                if (statusDiv) statusDiv.style.display = 'none';
+                // Show form again
+                if (answerForm) answerForm.style.display = 'block';
             }
         }
 
@@ -1462,6 +1475,11 @@
             roundHistory.forEach((round) => {
                 const scoreClass = round.roundScore > 0 ? 'positive' : round.roundScore < 0 ? 'negative' : 'zero';
                 const scoreSign = round.roundScore > 0 ? '+' : '';
+                
+                // Format answer style for display
+                const answerStyleLabel = round.answerStyle 
+                    ? round.answerStyle.charAt(0).toUpperCase() + round.answerStyle.slice(1)
+                    : 'Individual';
 
                 const item = document.createElement('li');
                 item.className = 'round-item';
@@ -1471,6 +1489,10 @@
                         <div class="round-score ${scoreClass}">${scoreSign}${round.roundScore}</div>
                     </div>
                     <div class="round-details">
+                        <div class="detail-item">
+                            <span class="label">📝 Answer Style:</span>
+                            <span class="value">${answerStyleLabel}</span>
+                        </div>
                         <div class="detail-item">
                             <span class="label">✓ Correct:</span>
                             <span class="value">${round.correct} × ${round.correctPoints} = ${round.correct * round.correctPoints}</span>
@@ -1747,8 +1769,8 @@
             
             loadContestantData();
 
-            // Auto-refresh every 10 seconds
-            refreshInterval = setInterval(refreshData, 10000);
+            // Auto-refresh every 5 seconds
+            refreshInterval = setInterval(refreshData, 5000);
         };
 
         // Clear interval on page unload

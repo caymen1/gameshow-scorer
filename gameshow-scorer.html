@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Show Scorer</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,UklGRjQOAABXRUJQVlA4WAoAAAAwAAAAbwAAcAAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZBTFBIFwIAAAWQJEmSYju9FOt91sH4BsyMnbX8zHAD4bXoMf+v7fSj6aosrSPCkds2kjQRrwPP+ojwv7zt8MzV4xzehFU58yWMcmU8NyYWrMFF52MymZw6MT0HZuxYxyk5vC6WzEqG9MpEzlMX4uuSezYwJFY2GdDKiVLWqk0M6OBVsSsv6RPKj46nLsZXKuu20Keik/SI6EVCceM2egTwslipmXQpaEfAU5fiS4OtO+gas0g6pqwyghdmn8cuOmbskrYR20x46nJ8Yf5/uIe2OvukpYwjNXgeOG4fLUUsSVMNU0o8dSUWuO4ATQVsSSMbYxnwLDDeIRpZOJN6Bk9djQlz5TDfEeqlcCe1EvibCk8D/x2jNoOHpDqVpyox8dM4P3eC6hhPyYeXwdf9/BUrrh7/sPMEFVdWQ/DUmawWzzSWJ2PFOR+wVkzw1KkkU/NhRuywPmvIY8zx89RQklJxK1WcZ4WNYpCnBpJkxCorPtjMm/UI84w81ZdEITYKxQUe2CrmeaoniVo8FGOAbc2RD7HAwVNdSZSLi/YMsoSdYqynOpIYZcksG9i1+/wfYNGKp9qSmBaXLJinC3vF/6+nWpJQpIskLdgPJHcfS3o81ZSEqLisg6xcOAjBUw1JCMtFWXk4DJR3D8s5PFWXhLa4UhZ1s+EoBE/VJKFvNgdNg+Pg4O5iZTpPVSVxUrw2yVNVnARHd/1LuPMzBFcFKwEAVlA4ICYKAACQLACdASpwAHEAPlEijUQjoiEWm9XQOAUEtgQ4BfgBC6yj/Sevg8R3P8jPZFq79m/CP9B/XX4AeJEWXsE/W/bh9AP6B6j/MA/SL/Rfab3C/MB+yf7Ye8f/Uf8V7Wf856gH85/2n/17A70AP2A9Lr/yf5H4Iv2r/8n+r+BX9UfUA9AD1AP4B1gHWZ/FDL1Pb7o7sVmThHOSJ+SUdWSKeQ7z31pwMPJAbgHan8b2T4gWl8nCPzVUdd3hA3F0AnmRdoeiEe0TNtqXRyaQEPudnpmGMpFpBrdQ8S+XiqVNgyY4yh0UsYrL3VWmiigPx3mKw0rgrsYacB4bvS6Tu/R80ncgTbdCnL7ljToQf2nz5bt0HCz+UdrWSlnxDCeVY+/9G62qSap3Ec/SvMl3JdVYhfZsOs4PYZBhdcDBfP6bRTgShN++I0y+2Tvw7c1e6zHhwA3cucVBNodYru1fiTXZA80A4vne84sUzL7OJMChkAD+8caJn0yzQ9MgcNNqcQh4o9TmVbG11x72voT7tJdIxBGK20dNZW1kD8g8zM+AFOojhxhC0pnIZW3YR+YaVssvHZxbz+Ewdhoy+cqRyVmX13jQxfPAOcgEnWUrjqOkqSuvkhJwO8ImyQ1fCN7o+pLptuJXtU64wFd/+L3gNQHZeZL0JwyfOi/pAF/vrToPpd6bf5UjttW/iwFfX1vmhvb9YgPu9TsBI9MSyAsfPfM83jPQlhPZR+EpzCObYUYMLtEnuHROSwHUg8pg5n9Uvm8XzqQeo6GmLMgUrz4eEpprW7TijByXvNwSqKHcDvgd0mZq8BBLPQmzNNa15ilvBnImGklGShVDf4p51YcjQb/ZrLWwLXhfYn0NH8nBDFntDv/XHXETZMqEmtA40fKHTQdXI3EmnmM5ycsGmDj3Y3D8+nYoF3sDYo8xScsU7NO5mmZ+mcl59i+6UBkIwLzyDSabIWA7Dwtj+53FLJMFnXV/8XwGODUnVv8Dbs4y/xn1VwvOWiBlM0J9QGsZHGHV7084pPizb1bSoFsGu95mIvwji2z6dZpcABB2MXqXBREMw7qfVKdS5dxGQZWTydkivUuxUApki784KmmVDmsu7mZeWscivjH2Ux1KwDV8RE4Yh87h5KJaS0qiGjFtjGzY5sr1b5yNSMfGzFdYP0FdvzCjXHTWdGgFGpx78xlPm3XGJH17laqPqUKfuwhATvhNcWAbOGCFjiE23cgsHuADA3raTi75//ZMWfGVIe/Q/z7PDKk1OjRPQZZPQ/vUnnl5xj7XHoUGWcIZuIE81ucfoC10R0cMEWtACBmLCsAcmkwdSjYmNMtUvriSU0sWp8bgnWD55uzZiEZcDY6k3QxenE4eoH4psHIO1PEJlv1nLv5Zpsv/8N5EcmW8lUoZeBwk283VPBsu4t1KQfDNwmkOL7yoeraFHhWR5JIeQs1QrWFWQaex5i3NXiNdIxqrQKOWsg9gW58Dz8YKwk7OH7xfhS4waFqMNJfNe4RD+6Z9ZvLIRcP9pohNy90BQhnTvC5H8/BVLm0o2IKwWDlhL7MslVZ/rkwKhOpJg7rNZMQX4eZddHKclkDwaqJCdA7ksqLvyom2ZK3rqkorZ7iyf+odxRIFseoJ6U6XmFkyJbRFHUQVuxsaj7wM0T2ehP0yiXN2oiEsb+s/IuI4TCl3q3lwr64EF7T7UEx5BNpiTkk1m6+rF2/byB6YWjHb06dCBoca/AK4P/M6GCsdwwk0dDbi0R7zUBvS/nMKoLhgiDsxP9v0xPybMO6G5cd7c0fr8UL3Flz1KD3LtOQaWGgPvzY8vZ7GbzDNU1GrhmjK0QloFZcFYvALPPqtbdi9i255S4nRO0BzAdO6nGQaaMpj04ygFEQe8/CRtKjORgKuKT23L+0k7qhkWeeA5ZFj7Bj8sHvdDV1LvB8YVaZsutCS9Xm3gv/tBfNyHUD8Hzq1OfLk2Qdvw/kjbbk7qMy78iE8DWrfqbxflZW3yxeTI8bxYMEjYhHu1VZmDdUILm8OKT2/BH0jE4fSbjxz3ql7a1oYspaUbIqsli+Ov+RoOEiZ7znm1eaQ406ZoO/fL++G6BNqpshwrqJtwzRj32423yjAsMqkkwBL3y/GFjofS089POzZCoi1ilqTKXYoTd2fY0+dKQ/H1yFb+BAyZ0HqG6rMAVEyxoUttnTCZ8hjOIGbbEYcRts7dhFrNLPB8W9EJ9JTmVgDn6FTD7BfCx7DOoIvmLmXIOaOw218cs/Y6s8SszPIuF0I5/Wcono8hW6x5EWmuOuH9K1GQoxaMoVbTXbCXdZoYrG3hRTvV7FGE6I6851R3ejgCX/9vfhOH7Dq5UgwqJbbBfpHACYIC+i7LwYv/DxEctv/IjbcCP6Vpr61Jckj5wUAd/f3+Usk+T/t5XHgMhuZZdr+utJ3ecX0cUlvdXLjEvpL+STLRqhYMa6vHxJ4JZx+bgijqNkJbmxzhx/bKEDlCW34bpzC3Dl95aCW867wShtBi/8yhiO4rgRx1uyJvcRi1WKKtJLWDLAm7/t6bCcqg1+0z36EzvtudPCWUv447opA345uWwdfMa/AL0AgZfUsReKhKjIkALMbW6tin2V9n/Ne48bX72D8fjW3QibINnWfUs6pWlsDKjnjpcq7Yr50ZyJcXs3VqoWfZL1oSHL8fB/eafzeC8UnlnJutdpxoEaHc26ipNU0GVqYjJeeyA6BF0dttJw/Yk9+Y1N22zcYQCkPHa+hh0UUhBuXvkRFi730GjANFD5Y7kTznlq5VZGZ9fpd/a87EPGanawepZF9adMssaXHwHLvwxixDkSLDVVZlWgwkV8hcx/wnSbGHlQq2d86zGi+pjWPVPG6MCeYmqQhClLX8hYJBjjtkgPaSbPVM36Euvvf1qjafFMgvLzSWL9H1d4Cim1DqzWq1LN4kFbEQKx3mWbV/FDhgzTL63q2/zTLz9+9jWvLTOw1D1XaEf2oezB2O/7MWPA/6c9Cv7XylqgXdrPZsVJFxu9HbE7Sowog7FIxBaAzjcutQiTDEDMOB4qUgn41KWz7UUfv/l8pEfKRXrMLYzpDP2zT4DRtjMiKf7rTEtAP3l78VmK9hV317co/EKNdtCRazmQx+eVlkPNiTzajCcjCKOiMr7VOvq29JNTM73krXQT3PtrjL3S++FPaI7l7U0ZvWLslHYKAFr5JypXed1ZQwSrNqXIPkTTyVoqRJAkra76Kyo0x8V3u++6DfUkPKBi5X17Ngv0LxFNV5ex6a5in+c8dwsqMKI6XO8ltwIGl6xAS6ude/QXdHQjiE9KRtrgogLQTjxHIFG+5p2LbyUY5/Q+dRWKGm8HVEImsf917l0ACY+YjsLHVKLPGPH1wsCx7G2zrAX+Q+NyqaPGncknKNK6IzmDQtfDtrwSS/vI914BKYivzYAAB5mZTRwodKj3sLGd15ziE8x7aDmDRb5mLM4qX8T6/kE1eOAAAAAA==">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         * {
@@ -25,7 +25,7 @@
             margin: 0 auto;
             background: white;
             border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             overflow: hidden;
         }
 
@@ -39,7 +39,7 @@
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .content {
@@ -104,7 +104,7 @@
             -moz-appearance: textfield;
             appearance: textfield;
         }
-
+        
         input[type="number"]::-webkit-inner-spin-button,
         input[type="number"]::-webkit-outer-spin-button {
             -webkit-appearance: inner-spin-button !important;
@@ -119,7 +119,6 @@
 
         /* Ensure spinners show in WebKit/Safari */
         @supports (-webkit-appearance: none) {
-
             input[type="number"]::-webkit-inner-spin-button,
             input[type="number"]::-webkit-outer-spin-button {
                 -webkit-appearance: inner-spin-button;
@@ -179,6 +178,15 @@
             padding: 15px;
             border-radius: 6px;
             border: 2px solid #e0e0e0;
+        }
+
+        .round-card select,
+        .round-card input[type="number"] {
+            color: #333;
+        }
+
+        .round-card select option {
+            color: #333;
         }
 
         .round-card label {
@@ -444,7 +452,6 @@
                 transform: scale(0.8) translateY(50px);
                 opacity: 0;
             }
-
             100% {
                 transform: scale(1) translateY(0);
                 opacity: 1;
@@ -458,15 +465,8 @@
         }
 
         @keyframes rotateLogo {
-
-            0%,
-            100% {
-                transform: rotate(0deg);
-            }
-
-            50% {
-                transform: rotate(10deg);
-            }
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(10deg); }
         }
 
         .splash-title {
@@ -1195,6 +1195,18 @@
         body.dark-mode .round-card {
             background: #1a1a2e;
             border-color: #2c3e50;
+        }
+
+        body.dark-mode .round-card select,
+        body.dark-mode .round-card input[type="number"] {
+            background: #0f3460;
+            color: #e0e0e0;
+            border-color: #2c3e50;
+        }
+
+        body.dark-mode .round-card select option {
+            background: #0f3460;
+            color: #e0e0e0;
         }
 
         body.dark-mode .dialog-box {
@@ -1994,15 +2006,8 @@
         }
 
         @keyframes celebrationBounce {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
         .game-complete-title {
@@ -2257,7 +2262,7 @@
             align-items: center;
             gap: 12px;
             transition: all 0.2s;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .tile-item:hover {
@@ -2692,38 +2697,37 @@
                 flex-direction: column;
                 gap: 10px;
             }
-
+            
             /* Enhanced mobile controls */
-            .correct-btn,
-            .incorrect-btn {
+            .correct-btn, .incorrect-btn {
                 font-size: 18px;
                 padding: 16px 24px;
                 min-height: 60px;
             }
-
+            
             .game-card {
                 padding: 20px;
             }
-
+            
             .contestant-name {
                 font-size: 20px;
             }
-
+            
             .contestant-score {
                 font-size: 28px;
             }
-
+            
             #enhancedControls {
                 flex-direction: column;
                 align-items: stretch;
             }
-
+            
             #enhancedControls button {
                 width: 100%;
                 padding: 14px;
                 font-size: 16px;
             }
-
+            
             .header h1 {
                 font-size: 1.8em;
             }
@@ -2761,7 +2765,6 @@
         }
     </style>
 </head>
-
 <body>
     <!-- Splash Screen -->
     <div class="splash-screen" id="splashScreen">
@@ -2769,21 +2772,20 @@
             <div class="splash-logo">🎮</div>
             <div class="splash-title">Game Show Scorer</div>
             <div class="splash-subtitle">Professional Competition Management</div>
-
+            
             <div class="splash-divider"></div>
-
+            
             <div class="splash-buttons">
                 <button class="splash-btn splash-btn-new" onclick="startNewSetup()">
                     <span>✨</span>
                     <span>Start New Competition</span>
                 </button>
-
+                
                 <label for="splashImportFile" class="splash-btn splash-btn-import">
                     <span>📤</span>
                     <span>Import Saved Setup</span>
                 </label>
-                <input type="file" id="splashImportFile" class="splash-file-input" accept=".json"
-                    onchange="importFromSplash(event)">
+                <input type="file" id="splashImportFile" class="splash-file-input" accept=".json" onchange="importFromSplash(event)">
             </div>
         </div>
     </div>
@@ -2810,11 +2812,16 @@
                     </h2>
                     <div class="form-group">
                         <label for="competitionName">Competition Name</label>
-                        <input type="text" id="competitionName" placeholder="Enter competition name..."
-                            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-                            inputmode="text">
+                        <input type="text" 
+                               id="competitionName" 
+                               placeholder="Enter competition name..."
+                               autocomplete="off"
+                               autocorrect="off"
+                               autocapitalize="off"
+                               spellcheck="false"
+                               inputmode="text">
                     </div>
-
+                    
                     <div class="form-group">
                         <label>Number of Contestants</label>
                         <div class="contestant-count-selector">
@@ -2886,8 +2893,7 @@
                         <span class="section-number">5</span>
                         Scoring Rules
                     </h2>
-                    <p style="color: #666; margin-bottom: 20px;">Define points awarded for correct answers and deducted
-                        for wrong answers in each round.</p>
+                    <p style="color: #666; margin-bottom: 20px;">Define points awarded for correct answers and deducted for wrong answers in each round.</p>
                     <div id="scoringContainer" class="scoring-panels"></div>
                 </div>
 
@@ -2911,8 +2917,7 @@
             <!-- Question View Screen -->
             <div id="questionViewScreen" class="hidden">
                 <div class="section">
-                    <div
-                        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 30px;">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 30px;">
                         <h2 id="questionViewRoundTitle" style="margin: 0 0 10px 0; font-size: 2em;">Round 1</h2>
                         <div id="questionViewScoringInfo" style="font-size: 1.1em; opacity: 0.9;">
                             Correct: +10 | Wrong: -5
@@ -2930,73 +2935,68 @@
                                     <span class="tile-icon">📝</span>
                                     <span class="tile-label">Text Box</span>
                                 </div>
-
+                                
                                 <!-- Image Tile -->
                                 <div class="tile-item" draggable="true" data-tile-type="image">
                                     <span class="tile-icon">🖼️</span>
                                     <span class="tile-label">Image</span>
                                 </div>
-
+                                
                                 <!-- Audio Tile -->
                                 <div class="tile-item" draggable="true" data-tile-type="audio">
                                     <span class="tile-icon">🎵</span>
                                     <span class="tile-label">Audio</span>
                                 </div>
-
+                                
                                 <!-- Button Tile -->
                                 <div class="tile-item" draggable="true" data-tile-type="button">
                                     <span class="tile-icon">🔘</span>
                                     <span class="tile-label">Button</span>
                                 </div>
                             </div>
-
-                            <div
-                                style="margin-top: 20px; padding: 15px; background: #e7f3ff; border-radius: 8px; font-size: 0.85em; color: #004085;">
+                            
+                            <div style="margin-top: 20px; padding: 15px; background: #e7f3ff; border-radius: 8px; font-size: 0.85em; color: #004085;">
                                 <strong>💡 Tip:</strong> Drag tiles onto the canvas to build your question!
                             </div>
                         </div>
-
+                        
                         <!-- Canvas (Right Side) -->
                         <div style="flex: 1;">
                             <h4 style="margin: 0 0 15px 0; color: #333;">🎨 Question Canvas</h4>
                             <div id="questionCanvas" class="question-canvas">
                                 <div class="canvas-placeholder">
                                     <div style="font-size: 3em; margin-bottom: 15px; opacity: 0.3;">🎯</div>
-                                    <p style="margin: 0; color: #999; font-size: 1.1em;">Drag tiles here to create your
-                                        question</p>
+                                    <p style="margin: 0; color: #999; font-size: 1.1em;">Drag tiles here to create your question</p>
                                 </div>
                             </div>
-
+                            
                             <!-- Answer Field (Mandatory) -->
-                            <div
-                                style="margin-top: 20px; padding: 20px; background: #fff9e6; border: 2px solid #ffc107; border-radius: 12px;">
+                            <div style="margin-top: 20px; padding: 20px; background: #fff9e6; border: 2px solid #ffc107; border-radius: 12px;">
                                 <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
                                     <h4 style="margin: 0; color: #856404;">✅ Correct Answer</h4>
-                                    <span
-                                        style="background: #dc3545; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">REQUIRED</span>
+                                    <span style="background: #dc3545; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">REQUIRED</span>
                                 </div>
-                                <select id="answerElementSelect" onchange="handleAnswerSelection()"
-                                    style="width: 100%; padding: 12px; border: 2px solid #ffc107; border-radius: 6px; font-size: 1em; background: white; margin-bottom: 10px; color: #333;">
+                                <select id="answerElementSelect" 
+                                        onchange="handleAnswerSelection()"
+                                        style="width: 100%; padding: 12px; border: 2px solid #ffc107; border-radius: 6px; font-size: 1em; background: white; margin-bottom: 10px; color: #333;">
                                     <option value="" style="color: #999;">-- Select Answer Element --</option>
-                                    <option value="ANS00" style="color: #333;">ANS00 - Custom Answer (Not in question)
-                                    </option>
+                                    <option value="ANS00" style="color: #333;">ANS00 - Custom Answer (Not in question)</option>
                                 </select>
                                 <div id="customAnswerField" style="display: none;">
-                                    <input type="text" id="customAnswerInput" placeholder="Enter the custom answer..."
-                                        onchange="saveAnswer()"
-                                        style="width: 100%; padding: 12px; border: 2px solid #ffc107; border-radius: 6px; font-size: 1em; background: white;">
+                                    <input type="text" id="customAnswerInput" 
+                                           placeholder="Enter the custom answer..." 
+                                           onchange="saveAnswer()"
+                                           style="width: 100%; padding: 12px; border: 2px solid #ffc107; border-radius: 6px; font-size: 1em; background: white;">
                                 </div>
                                 <p style="margin: 10px 0 0 0; font-size: 0.85em; color: #856404;">
-                                    💡 <strong>Tip:</strong> Select the element ID that represents the correct answer,
-                                    or choose ANS00 for a custom answer.
+                                    💡 <strong>Tip:</strong> Select the element ID that represents the correct answer, or choose ANS00 for a custom answer.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Navigation and Action Buttons -->
-                    <div
-                        style="display: flex; gap: 15px; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                    <div style="display: flex; gap: 15px; justify-content: space-between; align-items: center; flex-wrap: wrap;">
                         <!-- Left: Navigation -->
                         <div style="display: flex; gap: 10px;">
                             <button id="prevRoundBtn" onclick="navigateToPreviousRound()" class="btn-secondary">
@@ -3042,13 +3042,11 @@
                             <span>✗</span>
                             <span id="incorrectPointsDisplay">-0 points</span>
                         </div>
-                        <div class="round-info-item" style="cursor: pointer;" onclick="showContestantLinks()"
-                            title="Show Contestant Links & QR Codes">
+                        <div class="round-info-item" style="cursor: pointer;" onclick="showContestantLinks()" title="Show Contestant Links & QR Codes">
                             <span>🔗</span>
                             <span>Show Links</span>
                         </div>
-                        <div class="round-info-item" style="cursor: pointer;" onclick="showLeaderboardURL()"
-                            title="Get Public Leaderboard Link">
+                        <div class="round-info-item" style="cursor: pointer;" onclick="showLeaderboardURL()" title="Get Public Leaderboard Link">
                             <span>📊</span>
                             <span>Leaderboard URL</span>
                         </div>
@@ -3056,10 +3054,8 @@
                 </div>
 
                 <!-- Start Round Button (for tablet rounds) -->
-                <div id="startRoundSection"
-                    style="display: none; text-align: center; margin: 30px 0; padding: 20px; background: #f0f7ff; border-radius: 12px;">
-                    <button class="btn-primary" onclick="startTabletRound()"
-                        style="font-size: 1.3em; padding: 18px 50px;">
+                <div id="startRoundSection" style="display: none; text-align: center; margin: 30px 0; padding: 20px; background: #f0f7ff; border-radius: 12px;">
+                    <button class="btn-primary" onclick="startTabletRound()" style="font-size: 1.3em; padding: 18px 50px;">
                         🚀 Start Round & Push to Contestants
                     </button>
                     <p style="color: #666; margin-top: 15px; font-size: 1.1em;">
@@ -3138,7 +3134,7 @@
             <div class="game-complete-icon">🎉</div>
             <div class="game-complete-title">Game Complete!</div>
             <div class="game-complete-subtitle">Congratulations to all contestants</div>
-
+            
             <div class="winner-section" id="winnerSection">
                 <!-- Winner info will be populated here -->
             </div>
@@ -3204,14 +3200,9 @@
     <div class="dialog-overlay" id="showLinksDialog" onclick="closeShowLinks(event)">
         <div class="dialog-box" onclick="event.stopPropagation()" style="max-width: 800px;">
             <h2 style="margin-top: 0;">🔗 Contestant Links & QR Codes</h2>
-            <div
-                style="background: #f0f7ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #667eea;">
+            <div style="background: #f0f7ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #667eea;">
                 <p style="margin: 0; color: #555; font-size: 0.95em;">
-                    💡 <strong>Tip:</strong> Click <span
-                        style="background: #f59e0b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.9em;">📧
-                        Email</span> to open your email client with a pre-filled message, or <span
-                        style="background: #10b981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.9em;">📤
-                        Share</span> to send via WhatsApp, SMS, or any messaging app!
+                    💡 <strong>Tip:</strong> Click <span style="background: #f59e0b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.9em;">📧 Email</span> to open your email client with a pre-filled message, or <span style="background: #10b981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.9em;">📤 Share</span> to send via WhatsApp, SMS, or any messaging app!
                 </p>
             </div>
             <div id="contestantLinksContainer" style="max-height: 500px; overflow-y: auto;">
@@ -3228,18 +3219,16 @@
         <div class="dialog-box" onclick="event.stopPropagation()" style="max-width: 600px;">
             <h2 style="margin-top: 0;">📊 Public Leaderboard Link</h2>
             <div style="background: #f0f7ff; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-                <p style="margin: 0 0 15px 0; color: #666;">Share this link to let spectators view the live leaderboard:
-                </p>
+                <p style="margin: 0 0 15px 0; color: #666;">Share this link to let spectators view the live leaderboard:</p>
                 <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px;">
-                    <input type="text" id="leaderboardURLInput" readonly
-                        style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 6px; background: white; color: #333; font-size: 0.95em; font-family: monospace;">
-                    <button onclick="copyLeaderboardURL()"
-                        style="padding: 12px 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 6px; cursor: pointer; white-space: nowrap; font-weight: bold;">
+                    <input type="text" id="leaderboardURLInput" readonly 
+                           style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 6px; background: white; color: #333; font-size: 0.95em; font-family: monospace;">
+                    <button onclick="copyLeaderboardURL()" 
+                            style="padding: 12px 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 6px; cursor: pointer; white-space: nowrap; font-weight: bold;">
                         📋 Copy
                     </button>
                 </div>
-                <div
-                    style="text-align: center; background: white; padding: 15px; border-radius: 8px; display: inline-block;">
+                <div style="text-align: center; background: white; padding: 15px; border-radius: 8px; display: inline-block;">
                     <div id="leaderboardQR"></div>
                     <p style="margin: 10px 0 0 0; font-size: 0.85em; color: #999;">Scan to open leaderboard</p>
                 </div>
@@ -3302,33 +3291,27 @@
                 <h3>Color Scheme</h3>
                 <div class="color-schemes">
                     <div class="color-scheme active" data-scheme="purple" onclick="setColorScheme('purple')">
-                        <div class="color-preview"
-                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
                         <div class="color-scheme-name">Purple</div>
                     </div>
                     <div class="color-scheme" data-scheme="blue" onclick="setColorScheme('blue')">
-                        <div class="color-preview"
-                            style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
                         <div class="color-scheme-name">Blue</div>
                     </div>
                     <div class="color-scheme" data-scheme="green" onclick="setColorScheme('green')">
-                        <div class="color-preview"
-                            style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
                         <div class="color-scheme-name">Green</div>
                     </div>
                     <div class="color-scheme" data-scheme="orange" onclick="setColorScheme('orange')">
-                        <div class="color-preview"
-                            style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
                         <div class="color-scheme-name">Orange</div>
                     </div>
                     <div class="color-scheme" data-scheme="red" onclick="setColorScheme('red')">
-                        <div class="color-preview"
-                            style="background: linear-gradient(135deg, #f85032 0%, #e73827 100%);"></div>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #f85032 0%, #e73827 100%);"></div>
                         <div class="color-scheme-name">Red</div>
                     </div>
                     <div class="color-scheme" data-scheme="teal" onclick="setColorScheme('teal')">
-                        <div class="color-preview"
-                            style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);"></div>
+                        <div class="color-preview" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);"></div>
                         <div class="color-scheme-name">Teal</div>
                     </div>
                 </div>
@@ -3372,7 +3355,7 @@
         // Get it from: Firebase Console > Realtime Database > Copy database URL
         // Example: https://your-project-default-rtdb.firebaseio.com
         const FIREBASE_DATABASE_URL = 'https://gameshowscorer-default-rtdb.firebaseio.com';
-
+        
         // Set this to true once you've added your Firebase URL above
         const FIREBASE_ENABLED = true;
         // ===================================================================
@@ -3422,17 +3405,17 @@
             scores: {}, // contestant index -> total score
             roundHistory: {} // contestant index -> array of round results
         };
-
+        
         // Expose gameState to window for enhancements script
         window.gameState = gameState;
-
+        
         // New feature variables
         let soundEnabled = true;
         let darkModeEnabled = false;
         let gamePaused = false;
         let actionHistory = []; // For undo functionality
         let savedTemplates = {}; // For template library
-
+        
         // Sound effects using Web Audio API
         const sounds = {
             correct: null,
@@ -3445,7 +3428,7 @@
         // ===================================================================
         // FIREBASE FUNCTIONS
         // ===================================================================
-
+        
         // Save game data to Firebase
         async function saveToFirebase(sessionId, data) {
             if (!FIREBASE_ENABLED || !FIREBASE_DATABASE_URL || FIREBASE_DATABASE_URL === 'YOUR_FIREBASE_URL_HERE') {
@@ -3460,7 +3443,7 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
-
+                
                 if (response.ok) {
                     console.log('✅ Data saved to Firebase');
                     return true;
@@ -3482,7 +3465,7 @@
             try {
                 const url = `${FIREBASE_DATABASE_URL}/games/${sessionId}.json`;
                 const response = await fetch(url);
-
+                
                 if (response.ok) {
                     const data = await response.json();
                     console.log('✅ Data loaded from Firebase');
@@ -3510,14 +3493,14 @@
             console.log('FIREBASE_ENABLED:', FIREBASE_ENABLED);
             console.log('FIREBASE_DATABASE_URL:', FIREBASE_DATABASE_URL);
             console.log('URL Match:', FIREBASE_DATABASE_URL === 'https://gameshowscorer-default-rtdb.firebaseio.com');
-
+            
             gameState.roundStarted = true;
             saveLiveGameState();
-
+            
             // Hide start button, show contestant cards
             document.getElementById('startRoundSection').style.display = 'none';
             document.getElementById('contestantsGameGrid').style.display = 'grid';
-
+            
             // Start polling for answers
             if (FIREBASE_ENABLED && FIREBASE_DATABASE_URL === 'https://gameshowscorer-default-rtdb.firebaseio.com') {
                 console.log('🔄 Starting answer polling...');
@@ -3527,18 +3510,18 @@
                 console.log('   FIREBASE_ENABLED:', FIREBASE_ENABLED);
                 console.log('   URL:', FIREBASE_DATABASE_URL);
             }
-
+            
             console.log('✅ Round started - contestants can now submit answers');
         }
 
         // Poll for submitted answers (for tablet rounds)
         let answerPollingInterval = null;
-
+        
         function startAnswerPolling() {
             console.log('📡 startAnswerPolling() called');
             console.log('   Current round:', gameState.currentRound);
             console.log('   Is tablet round:', gameState.scoringRules[gameState.currentRound - 1]?.tabletRequired);
-
+            
             if (!gameState.scoringRules[gameState.currentRound - 1].tabletRequired) {
                 console.log('❌ Not a tablet round, aborting polling');
                 return; // Not a tablet round
@@ -3570,52 +3553,45 @@
                 const currentQuestion = gameState.currentQuestion || 1;
                 const rule = gameState.scoringRules[gameState.currentRound - 1];
                 const questionsInRound = rule?.questionsPerRound || 1;
-
+                
                 // Build path with question number if multi-question round
-                const answersPath = questionsInRound > 1
+                const answersPath = questionsInRound > 1 
                     ? `${gameState.currentRound}/q${currentQuestion}`
                     : `${gameState.currentRound}`;
-
+                    
                 const url = `${FIREBASE_DATABASE_URL}/games/${gameSessionId}/answers/${answersPath}.json`;
                 const response = await fetch(url);
-
+                
                 if (response.ok) {
                     const answers = await response.json();
                     console.log(`📥 Polling for answers - Round ${gameState.currentRound} Q${currentQuestion}:`, answers);
-
-                    // First, reset all answer displays to waiting state
-                    gameState.contestants.forEach((contestant, idx) => {
-                        const displayDiv = document.getElementById(`answerDisplay_${idx}`);
-                        const markingButtons = document.getElementById(`markingButtons_${idx}`);
-
-                        if (displayDiv) {
-                            displayDiv.className = 'tablet-answer-waiting';
-                            displayDiv.textContent = '⏳ Waiting for answer...';
-                        }
-                        if (markingButtons) {
-                            markingButtons.style.display = 'none';
-                        }
-                    });
-
+                    
+                    // Track which contestants have answered
+                    const answeredSet = new Set();
+                    
                     if (answers) {
                         // Update display for each contestant who has answered
                         Object.keys(answers).forEach(contestantIdx => {
+                            answeredSet.add(contestantIdx);
                             const answer = answers[contestantIdx];
                             console.log(`   Contestant ${contestantIdx}: "${answer?.answer}"`);
-
+                            
                             if (answer && answer.answer) {
                                 const displayDiv = document.getElementById(`answerDisplay_${contestantIdx}`);
                                 const markingButtons = document.getElementById(`markingButtons_${contestantIdx}`);
-
+                                
                                 console.log(`   - displayDiv exists:`, !!displayDiv);
                                 console.log(`   - markingButtons exists:`, !!markingButtons);
-
+                                
                                 if (displayDiv) {
-                                    displayDiv.className = 'tablet-answer-display';
-                                    displayDiv.textContent = answer.answer;
-                                    console.log(`   ✅ Answer displayed: "${answer.answer}"`);
+                                    // Only update if changed (reduce DOM updates)
+                                    if (displayDiv.textContent !== answer.answer) {
+                                        displayDiv.className = 'tablet-answer-display';
+                                        displayDiv.textContent = answer.answer;
+                                        console.log(`   ✅ Answer displayed: "${answer.answer}"`);
+                                    }
                                 }
-
+                                
                                 if (markingButtons) {
                                     markingButtons.style.display = 'flex';
                                     console.log(`   ✅ Marking buttons shown`);
@@ -3623,6 +3599,22 @@
                             }
                         });
                     }
+                    
+                    // Update unanswered contestants to waiting state (only if needed)
+                    gameState.contestants.forEach((contestant, idx) => {
+                        if (!answeredSet.has(String(idx))) {
+                            const displayDiv = document.getElementById(`answerDisplay_${idx}`);
+                            const markingButtons = document.getElementById(`markingButtons_${idx}`);
+                            
+                            if (displayDiv && displayDiv.className !== 'tablet-answer-waiting') {
+                                displayDiv.className = 'tablet-answer-waiting';
+                                displayDiv.textContent = '⏳ Waiting for answer...';
+                            }
+                            if (markingButtons && markingButtons.style.display !== 'none') {
+                                markingButtons.style.display = 'none';
+                            }
+                        }
+                    });
                 }
             } catch (error) {
                 console.error('Error checking answers:', error);
@@ -3634,15 +3626,15 @@
 
         function markAnswer(contestantIdx, isCorrect) {
             console.log(`✓/✗ Marking contestant ${contestantIdx} as ${isCorrect ? 'CORRECT' : 'WRONG'}`);
-
+            
             // Store the marking
             tabletMarkings[contestantIdx] = isCorrect;
             console.log(`   Current markings:`, JSON.stringify(tabletMarkings));
-
+            
             // Update button states
             const correctBtn = document.querySelector(`#markingButtons_${contestantIdx} .btn-mark-correct`);
             const wrongBtn = document.querySelector(`#markingButtons_${contestantIdx} .btn-mark-wrong`);
-
+            
             if (isCorrect) {
                 correctBtn.classList.add('selected');
                 wrongBtn.classList.remove('selected');
@@ -3658,7 +3650,7 @@
         function checkAllAnswersMarked() {
             const totalContestants = gameState.contestants.length;
             const markedCount = Object.keys(tabletMarkings).length;
-
+            
             if (markedCount === totalContestants) {
                 // All answers marked, enable submit button
                 document.getElementById('submitPointsBtn').classList.add('active');
@@ -3677,13 +3669,13 @@
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
             const dateTimeStr = `${year}${month}${day}-${hours}${minutes}${seconds}`;
-
+            
             // Get first 3 characters of name, convert to lowercase, remove spaces
             const namePrefix = name.trim().substring(0, 3).toLowerCase().replace(/\s/g, '');
-
+            
             // Get current page URL base (without file name)
             const baseURL = window.location.href.split('/').slice(0, -1).join('/');
-
+            
             // Include session ID in URL
             return `${baseURL}/viewer.html?id=${namePrefix}${dateTimeStr}&session=${gameSessionId}`;
         }
@@ -3707,7 +3699,7 @@
         async function shareContestantLink(url, contestantName, competitionName) {
             // Include URL in the message text for better compatibility
             const message = `Hi ${contestantName}! Here's your personal link for ${competitionName}. Click to join and submit your answers:\n\n${url}`;
-
+            
             // Check if Web Share API is supported
             if (navigator.share) {
                 try {
@@ -3735,7 +3727,7 @@
         function emailContestantLink(email, url, contestantName, competitionName) {
             // Create email with proper formatting
             const subject = encodeURIComponent(`${competitionName} - Your Personal Link`);
-
+            
             // Format the body with better spacing and the fallback message
             const body = encodeURIComponent(
                 `Hi ${contestantName}!\n\n` +
@@ -3746,35 +3738,35 @@
                 `If the link above is not clickable, copy and paste it into your browser.\n\n` +
                 `Good luck!\n`
             );
-
+            
             // Create mailto link
             const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
-
+            
             // Open default email client
             window.location.href = mailtoLink;
-
+            
             showToast(`📧 Opening email for ${contestantName}...`);
         }
 
         function showToast(message) {
             const toast = document.getElementById('toastNotification');
             const messageEl = document.getElementById('toastMessage');
-
+            
             if (!toast || !messageEl) {
                 console.error('Toast elements not found');
                 return;
             }
-
+            
             messageEl.textContent = message;
-
+            
             // Remove any existing 'show' class first
             toast.classList.remove('show');
-
+            
             // Small delay to ensure CSS transition works
             setTimeout(() => {
                 toast.classList.add('show');
             }, 10);
-
+            
             // Auto-hide after 3 seconds
             setTimeout(() => {
                 toast.classList.remove('show');
@@ -3790,10 +3782,10 @@
         function backToSplash() {
             // Show splash screen again
             document.getElementById('splashScreen').classList.remove('hidden');
-
+            
             // Hide initial setup
             document.getElementById('initialSetup').classList.add('hidden');
-
+            
             // Reset to initial setup if user was further along
             document.getElementById('contestantsSetup').classList.add('hidden');
             document.getElementById('roundSetup').classList.add('hidden');
@@ -3804,7 +3796,7 @@
             if (!file) return;
 
             const reader = new FileReader();
-            reader.onload = function (e) {
+            reader.onload = function(e) {
                 try {
                     const importData = JSON.parse(e.target.result);
 
@@ -3834,7 +3826,7 @@
                         // Auto-advance to contestants
                         console.log('🚀 Auto-advancing to contestants step...');
                         proceedToContestants();
-
+                        
                         // Show success message on contestants screen
                         setTimeout(() => {
                             const successDiv = document.createElement('div');
@@ -3842,7 +3834,7 @@
                             successDiv.innerHTML = '<strong>✓ Setup Imported Successfully!</strong><br>Contestants have been loaded. Click "Next: Setup Rounds" to continue.';
                             successDiv.style.cssText = 'background: #d4edda; color: #155724; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center; font-weight: 600; font-size: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);';
                             document.querySelector('#contestantsSetup .section').insertBefore(successDiv, document.querySelector('#contestantsSetup .section').firstChild);
-
+                            
                             setTimeout(() => successDiv.remove(), 8000);
                         }, 500);
                     }, 500);
@@ -3864,11 +3856,11 @@
             const file = event.target.files[0];
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     const preview = document.getElementById(`roundAvatarPreview${roundNum}`);
                     preview.src = e.target.result;
                     preview.classList.add('show');
-
+                    
                     // Store the round avatar data
                     roundAvatarData[roundNum] = e.target.result;
                 };
@@ -3889,11 +3881,11 @@
 
         function setTheme(theme) {
             currentTheme = theme;
-
+            
             // Update active state
             document.getElementById('lightTheme').classList.remove('active');
             document.getElementById('darkTheme').classList.remove('active');
-
+            
             if (theme === 'dark') {
                 document.body.classList.add('dark-mode');
                 document.getElementById('darkTheme').classList.add('active');
@@ -3901,27 +3893,27 @@
                 document.body.classList.remove('dark-mode');
                 document.getElementById('lightTheme').classList.add('active');
             }
-
+            
             // Save preference
             localStorage.setItem('theme', theme);
         }
 
         function setColorScheme(scheme) {
             currentColorScheme = scheme;
-
+            
             // Remove all scheme classes
-            document.body.classList.remove('scheme-purple', 'scheme-blue', 'scheme-green',
-                'scheme-orange', 'scheme-red', 'scheme-teal');
-
+            document.body.classList.remove('scheme-purple', 'scheme-blue', 'scheme-green', 
+                                          'scheme-orange', 'scheme-red', 'scheme-teal');
+            
             // Add new scheme
             document.body.classList.add(`scheme-${scheme}`);
-
+            
             // Update active state
             document.querySelectorAll('.color-scheme').forEach(el => {
                 el.classList.remove('active');
             });
             document.querySelector(`[data-scheme="${scheme}"]`).classList.add('active');
-
+            
             // Save preference
             localStorage.setItem('colorScheme', scheme);
         }
@@ -3996,16 +3988,16 @@
                     currentPosition += contestantsAtCurrentPosition;
                     contestantsAtCurrentPosition = 1;
                 }
-
+                
                 const position = currentPosition;
                 previousScore = contestant.score;
-
+                
                 const scoreClass = contestant.score > 0 ? 'positive' : contestant.score < 0 ? 'negative' : 'zero';
                 const scoreSign = contestant.score > 0 ? '+' : '';
                 const rankClass = position <= 3 ? `rank-${position}` : '';
-
+                
                 console.log(`Creating scoreboard item: ${contestant.name}, position=${position}, score=${contestant.score}, scoreClass=${scoreClass}`);
-
+                
                 const item = document.createElement('li');
                 item.className = `scoreboard-item ${rankClass}`;
                 item.innerHTML = `
@@ -4053,7 +4045,7 @@
                 history.forEach((round) => {
                     const scoreClass = round.roundScore > 0 ? 'positive' : round.roundScore < 0 ? 'negative' : 'zero';
                     const scoreSign = round.roundScore > 0 ? '+' : '';
-
+                    
                     // Add question info if this was a multi-question round
                     let roundDisplayName = round.roundName;
                     if (round.question && round.questionsInRound > 1) {
@@ -4130,7 +4122,7 @@
 
             const count = parseInt(document.getElementById('contestantCount').textContent);
             generateContestantCards(count);
-
+            
             document.getElementById('initialSetup').classList.add('hidden');
             document.getElementById('contestantsSetup').classList.remove('hidden');
         }
@@ -4191,11 +4183,11 @@
             const file = event.target.files[0];
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     const preview = document.getElementById(`preview${contestantNum}`);
                     preview.src = e.target.result;
                     preview.classList.add('show');
-
+                    
                     // Store the avatar data
                     if (!contestantData[contestantNum]) {
                         contestantData[contestantNum] = {};
@@ -4210,7 +4202,7 @@
         // Toggle avatar library
         function toggleAvatarLibrary(contestantNum) {
             const library = document.getElementById(`library${contestantNum}`);
-
+            
             if (library.classList.contains('hidden')) {
                 // Show library
                 library.innerHTML = '';
@@ -4234,15 +4226,15 @@
             library.querySelectorAll('.avatar-choice').forEach(img => {
                 img.classList.remove('selected');
             });
-
+            
             // Select this avatar
             imgElement.classList.add('selected');
-
+            
             // Update preview
             const preview = document.getElementById(`preview${contestantNum}`);
             preview.src = avatarSrc;
             preview.classList.add('show');
-
+            
             // Store the avatar data
             if (!contestantData[contestantNum]) {
                 contestantData[contestantNum] = {};
@@ -4279,7 +4271,7 @@
         // Set scoring - proceed to scoring setup
         function setScoring() {
             const numRounds = parseInt(document.getElementById('numRounds').value) || 0;
-
+            
             if (numRounds === 0) {
                 alert('Please generate rounds first');
                 return;
@@ -4287,7 +4279,7 @@
 
             // Generate scoring panels
             generateScoringPanels();
-
+            
             document.getElementById('roundsSetup').classList.add('hidden');
             document.getElementById('scoringSetup').classList.remove('hidden');
         }
@@ -4300,7 +4292,7 @@
 
             for (let i = 1; i <= numRounds; i++) {
                 const roundName = document.getElementById(`round${i}`)?.value || `Round ${i}`;
-
+                
                 const panel = document.createElement('div');
                 panel.className = 'scoring-panel';
                 panel.innerHTML = `
@@ -4350,7 +4342,7 @@
             successDiv.className = 'success-message';
             successDiv.textContent = '✓ Scoring rules saved successfully!';
             document.querySelector('#scoringSetup').insertBefore(successDiv, document.querySelector('#scoringSetup .section'));
-
+            
             setTimeout(() => successDiv.remove(), 3000);
         }
 
@@ -4362,9 +4354,9 @@
             console.log('   Dialog element:', dialog);
             console.log('   Dialog exists:', !!dialog);
             console.log('   Dialog classList before:', dialog?.classList);
-
+            
             dialog.classList.add('show');
-
+            
             console.log('   Dialog classList after:', dialog?.classList);
             console.log('   Dialog display style:', window.getComputedStyle(dialog).display);
             console.log('   Dialog visibility:', window.getComputedStyle(dialog).visibility);
@@ -4376,14 +4368,14 @@
         function skipQuestionCreation() {
             console.log('⏭️ Skipping question creation');
             document.getElementById('createQuestionsDialog').classList.remove('show');
-
+            
             // Check if there's existing game data
             const existingGameData = localStorage.getItem('liveGameState');
             const existingSetupData = localStorage.getItem('gameShowSetup');
-
+            
             console.log('   Existing game data:', existingGameData ? 'Found' : 'Not found');
             console.log('   Existing setup data:', existingSetupData ? 'Found' : 'Not found');
-
+            
             if (existingGameData || existingSetupData) {
                 // Show themed confirmation dialog
                 console.log('⚠️ Showing clear data dialog');
@@ -4400,20 +4392,20 @@
         let currentQuestionRound = 1;
         let currentQuestionNumber = 1;  // Track which question within the round
         let roundQuestions = {}; // Store questions for each round
-
+        
         function startQuestionCreation() {
             console.log('📝 Starting question creation');
             document.getElementById('createQuestionsDialog').classList.remove('show');
-
+            
             // Initialize question data structure based on questionsPerRound
             const numRounds = parseInt(document.getElementById('numRounds').value);
             for (let i = 1; i <= numRounds; i++) {
                 const questionsInRound = parseInt(document.getElementById(`questionsPerRound${i}`)?.value) || 1;
                 roundQuestions[i] = Array(questionsInRound).fill(null).map(() => ({}));
             }
-
+            
             console.log('📋 Initialized question structure:', roundQuestions);
-
+            
             // Show question view for first round, first question
             currentQuestionRound = 1;
             currentQuestionNumber = 1;
@@ -4422,44 +4414,44 @@
 
         function showQuestionView(roundNum, questionNum = 1) {
             console.log(`Showing question view for Round ${roundNum}, Question ${questionNum}`);
-
+            
             // Hide scoring setup, show question view
             document.getElementById('scoringSetup').classList.add('hidden');
             document.getElementById('questionViewScreen').classList.remove('hidden');
-
+            
             // Get round details
             const numRounds = parseInt(document.getElementById('numRounds').value);
             const questionsInRound = parseInt(document.getElementById(`questionsPerRound${roundNum}`)?.value) || 1;
             const roundName = document.getElementById(`round${roundNum}`)?.value || `Round ${roundNum}`;
             const correctPoints = document.getElementById(`correct${roundNum}`)?.value || 1;
             const incorrectPoints = document.getElementById(`incorrect${roundNum}`)?.value || 0;
-
+            
             // Update UI - show question number if multiple questions
-            const roundTitle = questionsInRound > 1
+            const roundTitle = questionsInRound > 1 
                 ? `${roundName} - Question ${questionNum} of ${questionsInRound}`
                 : roundName;
-
+            
             document.getElementById('questionViewRoundTitle').textContent = roundTitle;
-            document.getElementById('questionViewScoringInfo').textContent =
+            document.getElementById('questionViewScoringInfo').textContent = 
                 `Correct: +${correctPoints} | Wrong: -${incorrectPoints}`;
-            document.getElementById('questionViewRoundIndicator').textContent =
+            document.getElementById('questionViewRoundIndicator').textContent = 
                 `Round ${roundNum} of ${numRounds}`;
-
+            
             // Update navigation buttons for rounds
             document.getElementById('prevRoundBtn').disabled = (roundNum === 1 && questionNum === 1);
             document.getElementById('nextRoundBtn').disabled = (roundNum === numRounds && questionNum === questionsInRound);
-
+            
             // Update button text to show question navigation when applicable
             if (questionsInRound > 1) {
                 const prevBtn = document.getElementById('prevRoundBtn');
                 const nextBtn = document.getElementById('nextRoundBtn');
-
+                
                 if (questionNum > 1) {
                     prevBtn.textContent = `← Previous Question`;
                 } else if (roundNum > 1) {
                     prevBtn.textContent = `← Previous Round`;
                 }
-
+                
                 if (questionNum < questionsInRound) {
                     nextBtn.textContent = `Next Question →`;
                 } else if (roundNum < numRounds) {
@@ -4469,20 +4461,20 @@
                 document.getElementById('prevRoundBtn').textContent = `← Previous Round`;
                 document.getElementById('nextRoundBtn').textContent = `Next Round →`;
             }
-
+            
             currentQuestionRound = roundNum;
             currentQuestionNumber = questionNum;
-
+            
             // Initialize drag and drop (only once)
             initializeDragAndDrop();
-
+            
             // Load canvas for this question
             loadCanvasFromQuestion();
         }
 
         function navigateToPreviousRound() {
             const questionsInCurrentRound = parseInt(document.getElementById(`questionsPerRound${currentQuestionRound}`)?.value) || 1;
-
+            
             if (currentQuestionNumber > 1) {
                 // Go to previous question in same round
                 showQuestionView(currentQuestionRound, currentQuestionNumber - 1);
@@ -4496,7 +4488,7 @@
         function navigateToNextRound() {
             const numRounds = parseInt(document.getElementById('numRounds').value);
             const questionsInCurrentRound = parseInt(document.getElementById(`questionsPerRound${currentQuestionRound}`)?.value) || 1;
-
+            
             if (currentQuestionNumber < questionsInCurrentRound) {
                 // Go to next question in same round
                 showQuestionView(currentQuestionRound, currentQuestionNumber + 1);
@@ -4508,20 +4500,20 @@
 
         function exportQuestions() {
             console.log('📄 Exporting questions');
-
+            
             // Prepare export data
             const numRounds = parseInt(document.getElementById('numRounds').value);
             const exportData = {
                 competitionName: document.getElementById('competitionName').value,
                 rounds: []
             };
-
+            
             for (let i = 1; i <= numRounds; i++) {
                 const roundName = document.getElementById(`round${i}`)?.value || `Round ${i}`;
                 const correctPoints = document.getElementById(`correct${i}`)?.value || 1;
                 const incorrectPoints = document.getElementById(`incorrect${i}`)?.value || 0;
                 const questionsInRound = parseInt(document.getElementById(`questionsPerRound${i}`)?.value) || 1;
-
+                
                 exportData.rounds.push({
                     number: i,
                     name: roundName,
@@ -4533,7 +4525,7 @@
                     questions: roundQuestions[i] || []
                 });
             }
-
+            
             // Create and download JSON file
             const dataStr = JSON.stringify(exportData, null, 2);
             const dataBlob = new Blob([dataStr], { type: 'application/json' });
@@ -4543,32 +4535,32 @@
             link.download = `questions-${exportData.competitionName.replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.json`;
             link.click();
             URL.revokeObjectURL(url);
-
+            
             showToast('📄 Questions exported successfully!');
         }
 
         function saveQuestions() {
             console.log('💾 Saving questions');
-
+            
             // Save to localStorage for now
             localStorage.setItem('gameShowQuestions', JSON.stringify(roundQuestions));
-
+            
             showToast('💾 Questions saved successfully!');
         }
 
         function finishQuestionsAndStartGame() {
             console.log('🚀 Finishing questions and starting game');
-
+            
             // Save questions first
             saveQuestions();
-
+            
             // Hide question view
             document.getElementById('questionViewScreen').classList.add('hidden');
-
+            
             // Now proceed with the normal game start flow
             const existingGameData = localStorage.getItem('liveGameState');
             const existingSetupData = localStorage.getItem('gameShowSetup');
-
+            
             if (existingGameData || existingSetupData) {
                 document.getElementById('clearDataDialog').classList.add('show');
                 return;
@@ -4585,7 +4577,7 @@
             audio: 0,
             button: 0
         };
-
+        
         function generateTileElementId(type) {
             const typeMap = {
                 text: 'TXT',
@@ -4593,12 +4585,12 @@
                 audio: 'AUD',
                 button: 'BTN'
             };
-
+            
             tileCounters[type]++;
             const num = String(tileCounters[type]).padStart(2, '0');
             return `${typeMap[type]}${num}`;
         }
-
+        
         function resetTileCounters() {
             tileCounters = {
                 text: 0,
@@ -4607,34 +4599,34 @@
                 button: 0
             };
         }
-
+        
         function initializeDragAndDrop() {
             console.log('🎨 Initializing drag and drop');
-
+            
             const canvas = document.getElementById('questionCanvas');
             if (!canvas) return;
-
+            
             // Setup tile dragging from palette
             document.querySelectorAll('.tile-item').forEach(tile => {
                 tile.addEventListener('dragstart', handleTileDragStart);
                 tile.addEventListener('dragend', handleTileDragEnd);
             });
-
+            
             // Setup canvas drop zone
             canvas.addEventListener('dragover', handleCanvasDragOver);
             canvas.addEventListener('dragleave', handleCanvasDragLeave);
             canvas.addEventListener('drop', handleCanvasDrop);
-
+            
             console.log('✅ Drag and drop initialized');
         }
-
+        
         let draggedTileType = null;
         let draggedTileElement = null;
-
+        
         function handleTileDragStart(e) {
             const tileType = this.getAttribute('data-tile-type');
             const tileId = this.getAttribute('data-tile-id');
-
+            
             if (tileId) {
                 // Dragging an existing tile on canvas (for reordering)
                 draggedTileElement = this;
@@ -4648,48 +4640,48 @@
                 this.classList.add('dragging');
             }
         }
-
+        
         function handleTileDragEnd(e) {
             this.classList.remove('dragging');
             draggedTileType = null;
             draggedTileElement = null;
         }
-
+        
         function handleCanvasDragOver(e) {
             e.preventDefault();
             e.dataTransfer.dropEffect = draggedTileElement ? 'move' : 'copy';
             this.classList.add('drag-over');
         }
-
+        
         function handleCanvasDragLeave(e) {
             if (e.target === this) {
                 this.classList.remove('drag-over');
             }
         }
-
+        
         function handleCanvasDrop(e) {
             e.preventDefault();
             const canvas = this;
             canvas.classList.remove('drag-over');
             canvas.classList.add('has-tiles');
-
+            
             if (draggedTileType) {
                 // Creating a new tile from palette
                 const elementId = generateTileElementId(draggedTileType);
                 const droppedTile = createDroppedTile(draggedTileType, elementId);
                 canvas.appendChild(droppedTile);
-
+                
                 // Save to current question and update answer dropdown
                 saveCanvasToQuestion();
                 updateAnswerDropdown();
-
+                
                 console.log(`✅ Dropped new ${draggedTileType} tile with ID: ${elementId}`);
             } else if (draggedTileElement) {
                 // Reordering existing tile
                 const dropY = e.clientY;
                 const tiles = Array.from(canvas.querySelectorAll('.dropped-tile'));
                 let insertBefore = null;
-
+                
                 for (const tile of tiles) {
                     if (tile === draggedTileElement) continue;
                     const rect = tile.getBoundingClientRect();
@@ -4698,41 +4690,41 @@
                         break;
                     }
                 }
-
+                
                 if (insertBefore) {
                     canvas.insertBefore(draggedTileElement, insertBefore);
                 } else {
                     canvas.appendChild(draggedTileElement);
                 }
-
+                
                 // Save to current question
                 saveCanvasToQuestion();
-
+                
                 console.log('✅ Reordered tile');
             }
         }
-
+        
         function createDroppedTile(type, elementId) {
             const tile = document.createElement('div');
             tile.className = 'dropped-tile';
             tile.setAttribute('draggable', 'true');
             tile.setAttribute('data-tile-type', type);
             tile.setAttribute('data-tile-id', elementId);
-
+            
             const icons = {
                 text: '📝',
                 image: '🖼️',
                 audio: '🎵',
                 button: '🔘'
             };
-
+            
             const labels = {
                 text: 'Text Box',
                 image: 'Image',
                 audio: 'Audio',
                 button: 'Button'
             };
-
+            
             tile.innerHTML = `
                 <div class="dropped-tile-header">
                     <div class="dropped-tile-type">
@@ -4749,16 +4741,16 @@
                     ${getTileDefaultContent(type, elementId)}
                 </div>
             `;
-
+            
             // Add drag handlers to dropped tile
             tile.addEventListener('dragstart', handleTileDragStart);
             tile.addEventListener('dragend', handleTileDragEnd);
-
+            
             return tile;
         }
-
+        
         function getTileDefaultContent(type, tileId) {
-            switch (type) {
+            switch(type) {
                 case 'text':
                     return `
                         <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
@@ -4803,7 +4795,7 @@
                     `;
             }
         }
-
+        
         function editTile(tileId) {
             console.log('✏️ Edit tile:', tileId);
             const input = document.getElementById(`input-${tileId}`);
@@ -4811,19 +4803,19 @@
                 input.focus();
             }
         }
-
+        
         let tileToDelete = null;
-
+        
         function deleteTile(tileId) {
             tileToDelete = tileId;
             document.getElementById('deleteTileDialog').classList.add('show');
         }
-
+        
         function cancelDeleteTile() {
             document.getElementById('deleteTileDialog').classList.remove('show');
             tileToDelete = null;
         }
-
+        
         function confirmDeleteTile() {
             if (tileToDelete) {
                 const tile = document.querySelector(`[data-tile-id="${tileToDelete}"]`);
@@ -4831,7 +4823,7 @@
                     tile.remove();
                     saveCanvasToQuestion();
                     updateAnswerDropdown();
-
+                    
                     // Check if canvas is empty
                     const canvas = document.getElementById('questionCanvas');
                     if (!canvas.querySelector('.dropped-tile')) {
@@ -4842,29 +4834,29 @@
             document.getElementById('deleteTileDialog').classList.remove('show');
             tileToDelete = null;
         }
-
+        
         function updateTileContent(tileId) {
             console.log('💾 Updating tile content:', tileId);
             saveCanvasToQuestion();
         }
-
+        
         function updateTextFontSize(tileId) {
             const fontSizeSelect = document.getElementById(`fontsize-${tileId}`);
             const textarea = document.getElementById(`input-${tileId}`);
-
+            
             if (fontSizeSelect && textarea) {
                 textarea.style.fontSize = fontSizeSelect.value + 'px';
                 saveCanvasToQuestion();
             }
         }
-
+        
         function handleTileImageUpload(tileId) {
             const input = document.getElementById(`input-${tileId}`);
             const preview = document.getElementById(`preview-${tileId}`);
-
+            
             if (input.files && input.files[0]) {
                 const reader = new FileReader();
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     preview.innerHTML = `<img src="${e.target.result}" alt="Uploaded image">`;
                     preview.style.display = 'block';
                     saveCanvasToQuestion();
@@ -4872,14 +4864,14 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-
+        
         function handleTileAudioUpload(tileId) {
             const input = document.getElementById(`input-${tileId}`);
             const preview = document.getElementById(`preview-${tileId}`);
-
+            
             if (input.files && input.files[0]) {
                 const reader = new FileReader();
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     preview.innerHTML = `<audio controls src="${e.target.result}"></audio>`;
                     preview.style.display = 'block';
                     saveCanvasToQuestion();
@@ -4887,53 +4879,53 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-
+        
         function updateButtonText(tileId) {
             const input = document.getElementById(`input-${tileId}`);
             const preview = document.getElementById(`preview-${tileId}`);
             const buttonText = input.value || 'Click me';
-
+            
             preview.innerHTML = `
                 <button type="button" style="padding: 12px 24px; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">
                     ${buttonText}
                 </button>
             `;
-
+            
             saveCanvasToQuestion();
         }
-
+        
         function saveAnswer() {
             console.log('💾 Saving answer');
             saveCanvasToQuestion();
         }
-
+        
         function handleAnswerSelection() {
             const select = document.getElementById('answerElementSelect');
             const customField = document.getElementById('customAnswerField');
-
+            
             if (select.value === 'ANS00') {
                 customField.style.display = 'block';
             } else {
                 customField.style.display = 'none';
             }
-
+            
             saveAnswer();
         }
-
+        
         function updateAnswerDropdown() {
             const select = document.getElementById('answerElementSelect');
             if (!select) return;
-
+            
             const canvas = document.getElementById('questionCanvas');
             const tiles = canvas.querySelectorAll('.dropped-tile');
-
+            
             // Get current selection
             const currentValue = select.value;
-
+            
             // Rebuild options
             select.innerHTML = '<option value="" style="color: #999;">-- Select Answer Element --</option>';
             select.innerHTML += '<option value="ANS00" style="color: #333;">ANS00 - Custom Answer (Not in question)</option>';
-
+            
             // Add option for each tile
             tiles.forEach(tile => {
                 const elementId = tile.getAttribute('data-tile-id');
@@ -4944,14 +4936,14 @@
                     audio: 'Audio',
                     button: 'Button'
                 };
-
+                
                 const option = document.createElement('option');
                 option.value = elementId;
                 option.textContent = `${elementId} - ${typeLabels[type]}`;
                 option.style.color = '#333';
                 select.appendChild(option);
             });
-
+            
             // Restore selection if still valid
             if (currentValue) {
                 const optionExists = Array.from(select.options).some(opt => opt.value === currentValue);
@@ -4965,23 +4957,23 @@
                 }
             }
         }
-
+        
         function saveCanvasToQuestion() {
             const canvas = document.getElementById('questionCanvas');
             const tiles = canvas.querySelectorAll('.dropped-tile');
             const answerSelect = document.getElementById('answerElementSelect');
             const customAnswerInput = document.getElementById('customAnswerInput');
-
+            
             const canvasData = Array.from(tiles).map(tile => {
                 const tileId = tile.getAttribute('data-tile-id');
                 const tileType = tile.getAttribute('data-tile-type');
                 const input = document.getElementById(`input-${tileId}`);
                 const preview = document.getElementById(`preview-${tileId}`);
                 const fontSizeSelect = document.getElementById(`fontsize-${tileId}`);
-
+                
                 let content = '';
                 let fontSize = null;
-
+                
                 if (input) {
                     if (tileType === 'text') {
                         content = input.value;
@@ -4992,65 +4984,65 @@
                         content = input.value;
                     }
                 }
-
+                
                 const tileData = {
                     id: tileId,
                     type: tileType,
                     content: content
                 };
-
+                
                 if (fontSize) {
                     tileData.fontSize = fontSize;
                 }
-
+                
                 return tileData;
             });
-
+            
             // Save answer information
             const answerData = {
                 elementId: answerSelect ? answerSelect.value : '',
                 customAnswer: (answerSelect?.value === 'ANS00' && customAnswerInput) ? customAnswerInput.value : ''
             };
-
+            
             // Save to the current question in current round
             if (!roundQuestions[currentQuestionRound]) {
                 roundQuestions[currentQuestionRound] = [];
             }
-
+            
             const questionIndex = currentQuestionNumber - 1;
             roundQuestions[currentQuestionRound][questionIndex] = {
                 tiles: canvasData,
                 answer: answerData
             };
-
+            
             console.log('💾 Saved canvas to question:', currentQuestionRound, currentQuestionNumber, {
                 tiles: canvasData,
                 answer: answerData
             });
         }
-
+        
         function loadCanvasFromQuestion() {
             console.log('📥 Loading canvas for Round', currentQuestionRound, 'Question', currentQuestionNumber);
-
+            
             const canvas = document.getElementById('questionCanvas');
             if (!canvas) return;
-
+            
             // Clear existing tiles
             canvas.querySelectorAll('.dropped-tile').forEach(tile => tile.remove());
-
+            
             // Reset tile counters for this question
             resetTileCounters();
-
+            
             // Load question data
             const questionData = roundQuestions[currentQuestionRound]?.[currentQuestionNumber - 1];
-
+            
             if (questionData && questionData.tiles && questionData.tiles.length > 0) {
                 canvas.classList.add('has-tiles');
-
+                
                 questionData.tiles.forEach(tileData => {
                     const tile = createDroppedTile(tileData.type, tileData.id);
                     canvas.appendChild(tile);
-
+                    
                     // Update counter to account for loaded tile
                     const typeMap = { TXT: 'text', IMG: 'image', AUD: 'audio', BTN: 'button' };
                     const typePrefix = tileData.id.substring(0, 3);
@@ -5059,12 +5051,12 @@
                     if (tileCounters[tileType] < tileNum) {
                         tileCounters[tileType] = tileNum;
                     }
-
+                    
                     // Restore content
                     const input = document.getElementById(`input-${tileData.id}`);
                     const preview = document.getElementById(`preview-${tileData.id}`);
                     const fontSizeSelect = document.getElementById(`fontsize-${tileData.id}`);
-
+                    
                     if (tileData.type === 'text' && input) {
                         input.value = tileData.content || '';
                         if (tileData.fontSize && fontSizeSelect) {
@@ -5081,19 +5073,19 @@
                         updateButtonText(tileData.id);
                     }
                 });
-
+                
                 // Update answer dropdown with loaded tiles
                 updateAnswerDropdown();
-
+                
                 // Restore answer selection
                 const answerSelect = document.getElementById('answerElementSelect');
                 const customAnswerInput = document.getElementById('customAnswerInput');
                 const customField = document.getElementById('customAnswerField');
-
+                
                 if (questionData.answer) {
                     if (answerSelect && questionData.answer.elementId) {
                         answerSelect.value = questionData.answer.elementId;
-
+                        
                         if (questionData.answer.elementId === 'ANS00') {
                             customField.style.display = 'block';
                             if (customAnswerInput && questionData.answer.customAnswer) {
@@ -5106,13 +5098,13 @@
                 }
             } else {
                 canvas.classList.remove('has-tiles');
-
+                
                 // Clear answer fields if no question data
                 updateAnswerDropdown();
                 const answerSelect = document.getElementById('answerElementSelect');
                 const customAnswerInput = document.getElementById('customAnswerInput');
                 const customField = document.getElementById('customAnswerField');
-
+                
                 if (answerSelect) answerSelect.value = '';
                 if (customAnswerInput) customAnswerInput.value = '';
                 if (customField) customField.style.display = 'none';
@@ -5127,12 +5119,12 @@
         // Confirm clear data and start game
         function confirmClearData() {
             console.log('=== CLEARING ALL DATA ===');
-
+            
             // Clear previous game data from localStorage
             localStorage.removeItem('liveGameState');
             localStorage.removeItem('gameShowSetup');
             console.log('✓ localStorage cleared');
-
+            
             // Also clear from Firebase if there's a session
             if (gameSessionId && FIREBASE_ENABLED) {
                 const gameRef = `${FIREBASE_DATABASE_URL}/games/${gameSessionId}.json`;
@@ -5147,11 +5139,11 @@
             } else {
                 console.log('No Firebase session to delete');
             }
-
+            
             // Reset the gameSessionId to force a new session
             gameSessionId = null;
             console.log('✓ gameSessionId reset to null');
-
+            
             // IMPORTANT: Reset the global gameState to initial values
             gameState = {
                 currentRound: 1,
@@ -5164,10 +5156,10 @@
             window.gameState = gameState;
             console.log('✓ gameState reset to initial state');
             console.log('   currentRound:', gameState.currentRound);
-
+            
             // Hide dialog
             document.getElementById('clearDataDialog').classList.remove('show');
-
+            
             console.log('=== PROCEEDING WITH FRESH GAME START ===');
             // Proceed with game start
             proceedWithGameStart();
@@ -5177,7 +5169,7 @@
         function proceedWithGameStart() {
             console.log('>>> proceedWithGameStart called');
             console.log('   gameState.currentRound BEFORE init:', gameState.currentRound);
-
+            
             // Generate unique session ID for this game
             gameSessionId = generateSessionId();
             console.log('Game Session ID:', gameSessionId);
@@ -5185,7 +5177,7 @@
             const setup = collectData();
             const numRounds = parseInt(document.getElementById('numRounds').value);
             console.log('   Number of rounds from form:', numRounds);
-
+            
             const scoringRules = [];
 
             for (let i = 1; i <= numRounds; i++) {
@@ -5195,6 +5187,7 @@
                 const roundAvatar = roundAvatarData[i] || '';
                 const tabletRequired = document.getElementById(`tabletRequired${i}`)?.value === 'true';
                 const questionsPerRound = parseInt(document.getElementById(`questionsPerRound${i}`)?.value) || 1;
+                const answerStyle = document.getElementById(`answerStyle${i}`)?.value || 'individual';
 
                 scoringRules.push({
                     round: i,
@@ -5203,13 +5196,14 @@
                     incorrectPoints: -Math.abs(incorrectPoints),
                     avatar: roundAvatar,
                     tabletRequired: tabletRequired,
-                    questionsPerRound: questionsPerRound
+                    questionsPerRound: questionsPerRound,
+                    answerStyle: answerStyle
                 });
             }
 
             setup.scoringRules = scoringRules;
             setup.sessionId = gameSessionId;
-
+            
             // Save to localStorage (fallback)
             localStorage.setItem('gameShowSetup', JSON.stringify(setup));
 
@@ -5226,7 +5220,7 @@
                 sessionId: gameSessionId,
                 competitionName: setup.competitionName
             };
-
+            
             // Update window reference for enhancement scripts
             window.gameState = gameState;
             console.log('   gameState.currentRound AFTER init:', gameState.currentRound);
@@ -5258,10 +5252,10 @@
         function loadRound(roundNumber) {
             console.log('>>> loadRound called with roundNumber:', roundNumber);
             console.log('   gameState.currentRound before assignment:', gameState.currentRound);
-
+            
             gameState.currentRound = roundNumber;
             console.log('   gameState.currentRound after assignment:', gameState.currentRound);
-
+            
             const rule = gameState.scoringRules[roundNumber - 1];
             console.log('   Loading rule for round', roundNumber, ':', rule.name);
 
@@ -5269,21 +5263,21 @@
             const currentQuestion = gameState.currentQuestion || 1;
             const questionsInRound = rule.questionsPerRound || 1;
             let roundNameHTML = rule.name;
-
+            
             // Show question progress for multi-question rounds
             if (questionsInRound > 1) {
                 roundNameHTML += `<span class="round-question-badge">Question ${currentQuestion} of ${questionsInRound}</span>`;
             }
-
+            
             // Add tablet badge if applicable
             if (rule.tabletRequired) {
                 roundNameHTML += '<span class="round-tablet-badge">📱 Tablet Required</span>';
             }
-
+            
             document.getElementById('currentRoundName').innerHTML = roundNameHTML;
             document.getElementById('roundProgress').textContent = `Round ${roundNumber} of ${gameState.totalRounds}`;
             console.log('   Round progress set to: Round', roundNumber, 'of', gameState.totalRounds);
-
+            
             document.getElementById('correctPointsDisplay').textContent = `+${rule.correctPoints} point${rule.correctPoints !== 1 ? 's' : ''}`;
             document.getElementById('incorrectPointsDisplay').textContent = `${rule.incorrectPoints} point${rule.incorrectPoints !== -1 ? 's' : ''}`;
 
@@ -5303,7 +5297,7 @@
 
             // Generate contestant cards
             const container = document.getElementById('contestantsGameGrid');
-
+            
             // PRESERVE: Capture current input values before clearing
             const preservedValues = {};
             gameState.contestants.forEach((contestant, idx) => {
@@ -5316,7 +5310,7 @@
                     };
                 }
             });
-
+            
             container.innerHTML = '';
 
             gameState.contestants.forEach((contestant, idx) => {
@@ -5325,10 +5319,10 @@
                 const totalSign = currentTotal > 0 ? '+' : '';
                 const contestantURL = generateContestantURL(contestant.name);
                 const qrId = `qr-${idx}-${gameState.currentRound}`;
-
+                
                 const card = document.createElement('div');
                 card.className = 'contestant-scoring-card';
-
+                
                 // Check if this is a tablet round
                 if (rule.tabletRequired) {
                     // Tablet round - show answer submission interface
@@ -5417,7 +5411,7 @@
                         </div>
                     `;
                 }
-
+                
                 container.appendChild(card);
 
                 // Generate QR code after DOM element is added
@@ -5440,7 +5434,7 @@
             document.querySelectorAll('.points-input').forEach(input => {
                 input.addEventListener('input', checkAllPointsEntered);
             });
-
+            
             // RESTORE: Apply preserved values to newly created inputs
             gameState.contestants.forEach((contestant, idx) => {
                 if (preservedValues[idx]) {
@@ -5450,7 +5444,7 @@
                     if (wrongInput) wrongInput.value = preservedValues[idx].wrong;
                 }
             });
-
+            
             // Re-check if submit button should be active after restoring values
             checkAllPointsEntered();
 
@@ -5462,11 +5456,11 @@
                     tabletMarkings = {};
                     gameState.roundStarted = false;
                     document.getElementById('submitPointsBtn').classList.remove('active');
-
+                    
                     // Show start round button, hide contestant grid initially
                     document.getElementById('startRoundSection').style.display = 'block';
                     document.getElementById('contestantsGameGrid').style.display = 'none';
-
+                    
                     console.log('Tablet round loaded - waiting for Start Round button');
                 } else {
                     console.log('Tablet round already started - preserving markings:', JSON.stringify(tabletMarkings));
@@ -5478,7 +5472,7 @@
                 stopAnswerPolling();
                 document.getElementById('submitPointsBtn').classList.add('active');
             }
-
+            
             // Update submit button text for multi-question rounds
             const submitBtn = document.getElementById('submitPointsBtn');
             if (questionsInRound > 1) {
@@ -5505,7 +5499,7 @@
                 const min = parseInt(input.min) || 0;
                 const step = parseInt(input.step) || 1;
                 input.value = currentValue + step;
-
+                
                 // Trigger change event for any listeners
                 input.dispatchEvent(new Event('change', { bubbles: true }));
             }
@@ -5518,11 +5512,11 @@
                 const min = parseInt(input.min) || 0;
                 const step = parseInt(input.step) || 1;
                 const newValue = currentValue - step;
-
+                
                 // Don't go below minimum
                 if (newValue >= min) {
                     input.value = newValue;
-
+                    
                     // Trigger change event for any listeners
                     input.dispatchEvent(new Event('change', { bubbles: true }));
                 }
@@ -5532,7 +5526,7 @@
         function submitRoundPoints() {
             // Show confirmation dialog
             const rule = gameState.scoringRules[gameState.currentRound - 1];
-            document.getElementById('confirmationMessage').textContent =
+            document.getElementById('confirmationMessage').textContent = 
                 `Submit points for ${rule.name}? This cannot be undone.`;
             document.getElementById('confirmationDialog').classList.add('show');
         }
@@ -5544,14 +5538,14 @@
                 console.log('gameState.currentRound:', gameState.currentRound);
                 console.log('gameState.totalRounds:', gameState.totalRounds);
                 console.log('tabletMarkings:', JSON.stringify(tabletMarkings));
-
+                
                 // Disable the button to prevent double-clicks
                 let confirmBtn = document.querySelector('.btn-confirm.yes');
                 if (confirmBtn) {
                     confirmBtn.disabled = true;
                     confirmBtn.textContent = 'Submitting...';
                 }
-
+                
                 // Stop answer polling if active
                 stopAnswerPolling();
 
@@ -5562,160 +5556,161 @@
                 const rule = gameState.scoringRules[gameState.currentRound - 1];
                 const questionsInRound = rule.questionsPerRound || 1;
                 const currentQuestion = gameState.currentQuestion || 1;
-
+                
                 console.log('Current round:', gameState.currentRound, 'Rule:', rule);
                 console.log('Is tablet round:', rule.tabletRequired);
                 console.log('Questions in round:', questionsInRound, 'Current question:', currentQuestion);
 
-                gameState.contestants.forEach((contestant, idx) => {
-                    let correct = 0;
-                    let wrong = 0;
+            gameState.contestants.forEach((contestant, idx) => {
+                let correct = 0;
+                let wrong = 0;
 
-                    if (rule.tabletRequired) {
-                        // Tablet round - use markings
-                        console.log(`Tablet round - Contestant ${idx} (${contestant.name}) marking:`, tabletMarkings[idx]);
-                        if (tabletMarkings[idx] === true) {
-                            correct = 1;
-                            wrong = 0;
-                        } else if (tabletMarkings[idx] === false) {
-                            correct = 0;
-                            wrong = 1;
-                        }
-                        // If no marking, counts as 0/0
-                        console.log(`  → correct=${correct}, wrong=${wrong}`);
-                    } else {
-                        // Regular round - use input values
-                        correct = parseInt(document.getElementById(`correct_${idx}`).value) || 0;
-                        wrong = parseInt(document.getElementById(`wrong_${idx}`).value) || 0;
-                        console.log(`Regular round - Contestant ${idx} inputs: correct=${correct}, wrong=${wrong}`);
+                if (rule.tabletRequired) {
+                    // Tablet round - use markings
+                    console.log(`Tablet round - Contestant ${idx} (${contestant.name}) marking:`, tabletMarkings[idx]);
+                    if (tabletMarkings[idx] === true) {
+                        correct = 1;
+                        wrong = 0;
+                    } else if (tabletMarkings[idx] === false) {
+                        correct = 0;
+                        wrong = 1;
                     }
-
-                    const roundScore = (correct * rule.correctPoints) + (wrong * rule.incorrectPoints);
-                    gameState.scores[idx] = (gameState.scores[idx] || 0) + roundScore;
-
-                    // Track round history (include question number if multi-question round)
-                    const historyEntry = {
-                        round: gameState.currentRound,
-                        roundName: rule.name,
-                        correct: correct,
-                        wrong: wrong,
-                        correctPoints: rule.correctPoints,
-                        incorrectPoints: rule.incorrectPoints,
-                        roundScore: roundScore
-                    };
-
-                    // Add question number for multi-question rounds
-                    if (questionsInRound > 1) {
-                        historyEntry.question = currentQuestion;
-                        historyEntry.questionsInRound = questionsInRound;
-                    }
-
-                    gameState.roundHistory[idx].push(historyEntry);
-
-                    console.log(`${contestant.name}: correct=${correct}, wrong=${wrong}, roundScore=${roundScore}, total=${gameState.scores[idx]}`);
-                });
-
-                console.log('All scores AFTER update:', gameState.scores);
-                console.log('Round history:', gameState.roundHistory);
-
-                // Save live game state for viewer pages
-                console.log('Saving live game state...');
-                saveLiveGameState();
-
-                // Update scoreboard data (in case it's open)
-                console.log('Updating scoreboard display...');
-                updateScoreboardDisplay();
-
-                // Hide confirmation dialog
-                document.getElementById('confirmationDialog').classList.remove('show');
-
-                // Re-enable confirmation button for next use
-                confirmBtn = document.querySelector('.btn-confirm.yes');
-                if (confirmBtn) {
-                    confirmBtn.disabled = false;
-                    confirmBtn.textContent = 'Yes, Submit';
-                }
-
-                // Check if this is a multi-question round (tablet OR regular)
-                // Variables already declared at top of function
-
-                console.log(`Multi-question check: Question ${currentQuestion} of ${questionsInRound}`);
-
-                if (currentQuestion < questionsInRound) {
-                    // More questions in this round!
-                    console.log(`✅ ADVANCING TO NEXT QUESTION: ${currentQuestion + 1} of ${questionsInRound}`);
-                    gameState.currentQuestion = currentQuestion + 1;
-
-                    if (rule.tabletRequired) {
-                        // Tablet round - clear tablet markings and Firebase answers
-                        tabletMarkings = {};
-                        console.log('🗑️ Cleared tablet markings for next question');
-
-                        // Clear answers from Firebase for next question
-                        if (gameSessionId && FIREBASE_ENABLED) {
-                            const answersPath = questionsInRound > 1
-                                ? `${gameState.currentRound}/q${currentQuestion}`
-                                : `${gameState.currentRound}`;
-                            const answersUrl = `${FIREBASE_DATABASE_URL}/games/${gameSessionId}/answers/${answersPath}.json`;
-                            await fetch(answersUrl, { method: 'DELETE' });
-                            console.log('🗑️ Cleared Firebase answers for next question at:', answersPath);
-                        }
-
-                        // Reset the contestant cards to wait for new answers
-                        gameState.contestants.forEach((contestant, idx) => {
-                            const displayDiv = document.getElementById(`answerDisplay_${idx}`);
-                            const markingButtons = document.getElementById(`markingButtons_${idx}`);
-
-                            if (displayDiv) {
-                                displayDiv.className = 'tablet-answer-waiting';
-                                displayDiv.textContent = '⏳ Waiting for answer...';
-                            }
-                            if (markingButtons) {
-                                markingButtons.style.display = 'none';
-                            }
-                        });
-
-                        // Restart answer polling
-                        startAnswerPolling();
-                    } else {
-                        // Regular round - clear input fields for next question
-                        gameState.contestants.forEach((contestant, idx) => {
-                            const correctInput = document.getElementById(`correct_${idx}`);
-                            const wrongInput = document.getElementById(`wrong_${idx}`);
-                            if (correctInput) correctInput.value = '0';
-                            if (wrongInput) wrongInput.value = '0';
-                        });
-
-                        // Disable submit button until new values entered
-                        document.getElementById('submitPointsBtn').classList.remove('active');
-                        console.log('🗑️ Cleared input values for next question');
-                    }
-
-                    // Update the round header to show question number
-                    loadRound(gameState.currentRound);
-                    saveLiveGameState();
-
+                    // If no marking, counts as 0/0
+                    console.log(`  → correct=${correct}, wrong=${wrong}`);
                 } else {
-                    // Either not a tablet round, or this was the last question
-                    // Reset question counter for next round
-                    gameState.currentQuestion = 1;
-
-                    // Move to next round or end game
-                    console.log('Checking if should advance: currentRound=' + gameState.currentRound + ', totalRounds=' + gameState.totalRounds);
-                    if (gameState.currentRound < gameState.totalRounds) {
-                        console.log('✅ ADVANCING TO NEXT ROUND:', (gameState.currentRound + 1));
-                        loadRound(gameState.currentRound + 1);
-                    } else {
-                        console.log('🏁 ENDING GAME');
-                        endGame();
-                    }
+                    // Regular round - use input values
+                    correct = parseInt(document.getElementById(`correct_${idx}`).value) || 0;
+                    wrong = parseInt(document.getElementById(`wrong_${idx}`).value) || 0;
+                    console.log(`Regular round - Contestant ${idx} inputs: correct=${correct}, wrong=${wrong}`);
                 }
-                console.log('==================== CONFIRM SUBMISSION END ====================');
 
+                const roundScore = (correct * rule.correctPoints) + (wrong * rule.incorrectPoints);
+                gameState.scores[idx] = (gameState.scores[idx] || 0) + roundScore;
+                
+                // Track round history (include question number if multi-question round)
+                const historyEntry = {
+                    round: gameState.currentRound,
+                    roundName: rule.name,
+                    correct: correct,
+                    wrong: wrong,
+                    correctPoints: rule.correctPoints,
+                    incorrectPoints: rule.incorrectPoints,
+                    roundScore: roundScore,
+                    answerStyle: rule.answerStyle || 'individual'
+                };
+                
+                // Add question number for multi-question rounds
+                if (questionsInRound > 1) {
+                    historyEntry.question = currentQuestion;
+                    historyEntry.questionsInRound = questionsInRound;
+                }
+                
+                gameState.roundHistory[idx].push(historyEntry);
+                
+                console.log(`${contestant.name}: correct=${correct}, wrong=${wrong}, roundScore=${roundScore}, total=${gameState.scores[idx]}`);
+            });
+
+            console.log('All scores AFTER update:', gameState.scores);
+            console.log('Round history:', gameState.roundHistory);
+
+            // Save live game state for viewer pages
+            console.log('Saving live game state...');
+            saveLiveGameState();
+
+            // Update scoreboard data (in case it's open)
+            console.log('Updating scoreboard display...');
+            updateScoreboardDisplay();
+
+            // Hide confirmation dialog
+            document.getElementById('confirmationDialog').classList.remove('show');
+            
+            // Re-enable confirmation button for next use
+            confirmBtn = document.querySelector('.btn-confirm.yes');
+            if (confirmBtn) {
+                confirmBtn.disabled = false;
+                confirmBtn.textContent = 'Yes, Submit';
+            }
+
+            // Check if this is a multi-question round (tablet OR regular)
+            // Variables already declared at top of function
+            
+            console.log(`Multi-question check: Question ${currentQuestion} of ${questionsInRound}`);
+
+            if (currentQuestion < questionsInRound) {
+                // More questions in this round!
+                console.log(`✅ ADVANCING TO NEXT QUESTION: ${currentQuestion + 1} of ${questionsInRound}`);
+                gameState.currentQuestion = currentQuestion + 1;
+                
+                if (rule.tabletRequired) {
+                    // Tablet round - clear tablet markings and Firebase answers
+                    tabletMarkings = {};
+                    console.log('🗑️ Cleared tablet markings for next question');
+                    
+                    // Clear answers from Firebase for next question
+                    if (gameSessionId && FIREBASE_ENABLED) {
+                        const answersPath = questionsInRound > 1 
+                            ? `${gameState.currentRound}/q${currentQuestion}`
+                            : `${gameState.currentRound}`;
+                        const answersUrl = `${FIREBASE_DATABASE_URL}/games/${gameSessionId}/answers/${answersPath}.json`;
+                        await fetch(answersUrl, { method: 'DELETE' });
+                        console.log('🗑️ Cleared Firebase answers for next question at:', answersPath);
+                    }
+                    
+                    // Reset the contestant cards to wait for new answers
+                    gameState.contestants.forEach((contestant, idx) => {
+                        const displayDiv = document.getElementById(`answerDisplay_${idx}`);
+                        const markingButtons = document.getElementById(`markingButtons_${idx}`);
+                        
+                        if (displayDiv) {
+                            displayDiv.className = 'tablet-answer-waiting';
+                            displayDiv.textContent = '⏳ Waiting for answer...';
+                        }
+                        if (markingButtons) {
+                            markingButtons.style.display = 'none';
+                        }
+                    });
+                    
+                    // Restart answer polling
+                    startAnswerPolling();
+                } else {
+                    // Regular round - clear input fields for next question
+                    gameState.contestants.forEach((contestant, idx) => {
+                        const correctInput = document.getElementById(`correct_${idx}`);
+                        const wrongInput = document.getElementById(`wrong_${idx}`);
+                        if (correctInput) correctInput.value = '0';
+                        if (wrongInput) wrongInput.value = '0';
+                    });
+                    
+                    // Disable submit button until new values entered
+                    document.getElementById('submitPointsBtn').classList.remove('active');
+                    console.log('🗑️ Cleared input values for next question');
+                }
+                
+                // Update the round header to show question number
+                loadRound(gameState.currentRound);
+                saveLiveGameState();
+                
+            } else {
+                // Either not a tablet round, or this was the last question
+                // Reset question counter for next round
+                gameState.currentQuestion = 1;
+                
+                // Move to next round or end game
+                console.log('Checking if should advance: currentRound=' + gameState.currentRound + ', totalRounds=' + gameState.totalRounds);
+                if (gameState.currentRound < gameState.totalRounds) {
+                    console.log('✅ ADVANCING TO NEXT ROUND:', (gameState.currentRound + 1));
+                    loadRound(gameState.currentRound + 1);
+                } else {
+                    console.log('🏁 ENDING GAME');
+                    endGame();
+                }
+            }
+            console.log('==================== CONFIRM SUBMISSION END ====================');
+            
             } catch (error) {
                 console.error('❌ ERROR in confirmSubmission:', error);
                 alert('An error occurred while submitting points. Please check the console for details.');
-
+                
                 // Re-enable button on error
                 confirmBtn = document.querySelector('.btn-confirm.yes');
                 if (confirmBtn) {
@@ -5741,7 +5736,7 @@
                     console.warn('Could not read existing answers:', error);
                 }
             }
-
+            
             const liveState = {
                 contestants: gameState.contestants,
                 scores: gameState.scores,
@@ -5757,20 +5752,20 @@
                 lastUpdated: new Date().toISOString(),
                 expiresAt: Date.now() + (24 * 60 * 60 * 1000) // 24 hours from now in milliseconds
             };
-
+            
             // CRITICAL: Preserve answers from tablet rounds
             if (existingAnswers) {
                 liveState.answers = existingAnswers;
                 console.log('✅ Answers preserved in save');
             }
-
+            
             // Save to localStorage (fallback)
             localStorage.setItem('liveGameState', JSON.stringify(liveState));
-
+            
             // Save to Firebase with session ID
             if (gameSessionId) {
                 await saveToFirebase(gameSessionId, liveState);
-
+                
                 // Also save as 'latest' for static leaderboard URL
                 await saveToFirebase('latest', liveState);
             }
@@ -5891,7 +5886,7 @@
             const dataStr = JSON.stringify(exportData, null, 2);
             const blob = new Blob([dataStr], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
-
+            
             const link = document.createElement('a');
             link.href = url;
             link.download = `${setup.competitionName.replace(/[^a-z0-9]/gi, '_')}_setup.json`;
@@ -5905,13 +5900,13 @@
             successDiv.className = 'success-message';
             successDiv.textContent = '✓ Setup exported successfully!';
             document.querySelector('#scoringSetup').insertBefore(successDiv, document.querySelector('#scoringSetup .section'));
-
+            
             setTimeout(() => successDiv.remove(), 3000);
         }
 
         // Modified proceedToContestants to handle imported data
         const originalProceedToContestants = proceedToContestants;
-        proceedToContestants = function () {
+        proceedToContestants = function() {
             originalProceedToContestants();
 
             // If we have imported data, populate it
@@ -5924,7 +5919,7 @@
                     document.getElementById(`name${i}`).value = c.name;
                     document.getElementById(`email${i}`).value = c.email || '';
                     document.getElementById(`mobile${i}`).value = c.mobile || '';
-
+                    
                     if (c.avatar) {
                         const preview = document.getElementById(`preview${i}`);
                         preview.src = c.avatar;
@@ -5940,7 +5935,7 @@
 
         // Modified proceedToRounds to handle imported data
         const originalProceedToRounds = proceedToRounds;
-        proceedToRounds = function () {
+        proceedToRounds = function() {
             originalProceedToRounds();
 
             // If we have imported data, continue populating
@@ -5964,9 +5959,9 @@
                 // Fill round data
                 roundsData.forEach((r, idx) => {
                     const i = idx + 1;
-                    console.log(`   - Round ${i}:`, r.name, 'Tablet:', r.tabletRequired, 'Questions:', r.questionsPerRound);
+                    console.log(`   - Round ${i}:`, r.name, 'Tablet:', r.tabletRequired, 'Questions:', r.questionsPerRound, 'Answer Style:', r.answerStyle);
                     document.getElementById(`round${i}`).value = r.name;
-
+                    
                     if (r.avatar) {
                         const preview = document.getElementById(`roundAvatarPreview${i}`);
                         preview.src = r.avatar;
@@ -5978,10 +5973,15 @@
                     if (r.tabletRequired !== undefined) {
                         setTabletRequirement(i, r.tabletRequired);
                     }
-
+                    
                     // Restore questions per round
                     if (r.questionsPerRound !== undefined) {
                         document.getElementById(`questionsPerRound${i}`).value = r.questionsPerRound;
+                    }
+                    
+                    // Restore answer style
+                    if (r.answerStyle !== undefined) {
+                        document.getElementById(`answerStyle${i}`).value = r.answerStyle;
                     }
                 });
 
@@ -5995,7 +5995,7 @@
                     successDiv.innerHTML = '<strong>✓ Rounds Loaded Successfully!</strong><br>Round names, avatars, and tablet settings have been restored. Click "Set Scoring" to continue.';
                     successDiv.style.cssText = 'background: #d4edda; color: #155724; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center; font-weight: 600; font-size: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);';
                     document.querySelector('#roundsSetup .section').insertBefore(successDiv, document.querySelector('#roundsSetup .section').firstChild);
-
+                    
                     setTimeout(() => successDiv.remove(), 8000);
                 }, 500);
             }
@@ -6003,7 +6003,7 @@
 
         // Modified setScoring to handle imported data
         const originalSetScoring = setScoring;
-        setScoring = function () {
+        setScoring = function() {
             originalSetScoring();
 
             // If we have imported data, populate scoring
@@ -6036,7 +6036,7 @@
                 successDiv.innerHTML = '<strong>🎉 Import Complete!</strong><br>All data has been restored: Contestants, Rounds, Avatars, Tablet Settings, and Scoring Rules.<br>Review your setup below and click "Start Game" when ready.';
                 successDiv.style.cssText = 'background: #d4edda; color: #155724; padding: 25px; border-radius: 8px; margin: 20px 0; text-align: center; font-weight: 600; font-size: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); animation: slideIn 0.3s ease-out;';
                 document.querySelector('#scoringSetup .section').insertBefore(successDiv, document.querySelector('#scoringSetup .section').firstChild);
-
+                
                 setTimeout(() => {
                     successDiv.style.animation = 'fadeOut 0.3s ease-out';
                     setTimeout(() => successDiv.remove(), 300);
@@ -6072,6 +6072,18 @@
                         </div>
                     </div>
                     
+                    <div class="round-answer-style-section" style="margin-top: 15px;">
+                        <h5>Answer Style</h5>
+                        <div class="form-group">
+                            <select id="answerStyle${i}" style="width: 100%; padding: 8px; border: 2px solid #ddd; border-radius: 6px; font-size: 16px;">
+                                <option value="individual">Individual</option>
+                                <option value="pairs">Pairs</option>
+                                <option value="buzzer">Buzzer</option>
+                                <option value="special">Special</option>
+                            </select>
+                        </div>
+                    </div>
+                    
                     <div class="round-tablet-section">
                         <h5>Requires External Tablet?</h5>
                         <div class="tablet-toggle">
@@ -6099,7 +6111,7 @@
 
             // Add event listeners to tablet toggle buttons
             document.querySelectorAll('.tablet-option').forEach(option => {
-                option.addEventListener('click', function () {
+                option.addEventListener('click', function() {
                     const roundNum = this.getAttribute('data-round');
                     const value = this.getAttribute('data-value');
                     setTabletRequirement(roundNum, value === 'true');
@@ -6115,7 +6127,7 @@
             const hiddenInput = document.getElementById(`tabletRequired${roundNum}`);
             const yesOption = document.querySelector(`.tablet-option.yes[data-round="${roundNum}"]`);
             const noOption = document.querySelector(`.tablet-option.no[data-round="${roundNum}"]`);
-
+            
             if (required) {
                 yesOption.classList.add('active');
                 noOption.classList.remove('active');
@@ -6153,31 +6165,34 @@
             const competitionName = document.getElementById('competitionName').value;
             const count = parseInt(document.getElementById('contestantCount').textContent);
             const contestants = [];
-
+            
             for (let i = 1; i <= count; i++) {
                 const name = document.getElementById(`name${i}`).value;
                 const email = document.getElementById(`email${i}`).value;
                 const mobile = document.getElementById(`mobile${i}`).value;
                 const avatar = contestantData[i]?.avatar || '';
                 const avatarType = contestantData[i]?.avatarType || '';
-
+                
                 contestants.push({ name, email, mobile, avatar, avatarType });
             }
 
             const numRounds = parseInt(document.getElementById('numRounds').value) || 0;
             const rounds = [];
-
+            
             for (let i = 1; i <= numRounds; i++) {
                 const roundName = document.getElementById(`round${i}`)?.value || `Round ${i}`;
                 const roundAvatar = roundAvatarData[i] || '';
                 const tabletRequired = document.getElementById(`tabletRequired${i}`)?.value === 'true';
                 const questionsPerRound = parseInt(document.getElementById(`questionsPerRound${i}`)?.value) || 1;
-                rounds.push({
-                    number: i,
-                    name: roundName,
-                    avatar: roundAvatar,
+                const answerStyle = document.getElementById(`answerStyle${i}`)?.value || 'individual';
+                
+                rounds.push({ 
+                    number: i, 
+                    name: roundName, 
+                    avatar: roundAvatar, 
                     tabletRequired: tabletRequired,
-                    questionsPerRound: questionsPerRound
+                    questionsPerRound: questionsPerRound,
+                    answerStyle: answerStyle
                 });
             }
 
@@ -6192,12 +6207,12 @@
         function saveSetup() {
             const setup = collectData();
             localStorage.setItem('gameShowSetup', JSON.stringify(setup));
-
+            
             const successDiv = document.createElement('div');
             successDiv.className = 'success-message';
             successDiv.textContent = '✓ Setup saved successfully!';
             document.querySelector('.content').insertBefore(successDiv, document.querySelector('.content').firstChild);
-
+            
             setTimeout(() => successDiv.remove(), 3000);
         }
 
@@ -6210,41 +6225,41 @@
 
         // Load Setup Dialog Functions
         let pendingSetupData = null;
-
+        
         function showLoadSetupDialog(savedData) {
             pendingSetupData = savedData;
             const dialog = document.getElementById('loadSetupDialog');
-
+            
             // Show dialog with smooth transition
             dialog.classList.remove('show');
             dialog.style.display = 'flex';
-
+            
             // Small delay for smooth transition
             setTimeout(() => {
                 dialog.classList.add('show');
             }, 50);
         }
-
+        
         function confirmLoadSetup() {
             document.getElementById('loadSetupDialog').classList.remove('show');
             if (pendingSetupData) {
                 const data = JSON.parse(pendingSetupData);
                 document.getElementById('competitionName').value = data.competitionName || '';
                 document.getElementById('contestantCount').textContent = data.contestants.length;
-
+                
                 // Update header with competition name
                 updateHeader();
-
+                
                 // Auto-proceed through setup
                 proceedToContestants();
-
+                
                 // Fill contestant data
                 data.contestants.forEach((c, idx) => {
                     const i = idx + 1;
                     document.getElementById(`name${i}`).value = c.name;
                     document.getElementById(`email${i}`).value = c.email;
                     document.getElementById(`mobile${i}`).value = c.mobile;
-
+                    
                     if (c.avatar) {
                         const preview = document.getElementById(`preview${i}`);
                         preview.src = c.avatar;
@@ -6255,36 +6270,36 @@
             }
             pendingSetupData = null;
         }
-
+        
         function declineLoadSetup() {
             document.getElementById('loadSetupDialog').classList.remove('show');
             pendingSetupData = null;
         }
-
+        
         // Show Links Dialog Functions
         function showContestantLinks() {
             console.log('🔗 Show Links clicked');
             console.log('gameState:', gameState);
             console.log('contestants:', gameState.contestants);
-
+            
             const container = document.getElementById('contestantLinksContainer');
             if (!container) {
                 console.error('❌ Container not found!');
                 return;
             }
-
+            
             if (!gameState.contestants || gameState.contestants.length === 0) {
                 console.error('❌ No contestants in gameState!');
                 alert('No contestants available yet. Please start the game first.');
                 return;
             }
-
+            
             container.innerHTML = '';
-
+            
             gameState.contestants.forEach((contestant, idx) => {
                 const contestantURL = generateContestantURL(contestant.name);
                 const qrId = `links-qr-${idx}`;
-
+                
                 const linkCard = document.createElement('div');
                 linkCard.style.cssText = 'border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px; margin-bottom: 15px; background: #f9f9f9;';
                 linkCard.innerHTML = `
@@ -6316,7 +6331,7 @@
                     </div>
                 `;
                 container.appendChild(linkCard);
-
+                
                 // Generate QR code after DOM update
                 setTimeout(() => {
                     const qrContainer = document.getElementById(qrId);
@@ -6332,17 +6347,17 @@
                     }
                 }, 0);
             });
-
+            
             console.log('✅ Opening dialog');
             const dialog = document.getElementById('showLinksDialog');
             dialog.style.display = 'flex';
-
+            
             // Use same pattern as other dialogs - add show class after display
             setTimeout(() => {
                 dialog.classList.add('show');
             }, 10);
         }
-
+        
         function closeShowLinks(event) {
             if (event && event.target.id !== 'showLinksDialog') return;
             const dialog = document.getElementById('showLinksDialog');
@@ -6362,16 +6377,16 @@
             // Generate static URL (always points to 'latest' game)
             const baseURL = window.location.href.split('?')[0].replace('gameshow-scorer.html', 'leaderboard.html');
             const staticLeaderboardURL = baseURL;
-
+            
             console.log('📊 Static Leaderboard URL:', staticLeaderboardURL);
-
+            
             // Populate the input field
             document.getElementById('leaderboardURLInput').value = staticLeaderboardURL;
-
+            
             // Clear and regenerate QR code
             const qrContainer = document.getElementById('leaderboardQR');
             qrContainer.innerHTML = '';
-
+            
             setTimeout(() => {
                 if (typeof QRCode !== 'undefined') {
                     new QRCode(qrContainer, {
@@ -6384,7 +6399,7 @@
                     });
                 }
             }, 0);
-
+            
             // Show dialog
             const dialog = document.getElementById('leaderboardURLDialog');
             dialog.style.display = 'flex';
@@ -6392,31 +6407,31 @@
                 dialog.classList.add('show');
             }, 10);
         }
-
+        
         function copyLeaderboardURL() {
             const urlInput = document.getElementById('leaderboardURLInput');
             const url = urlInput.value;
-
+            
             const copySuccess = () => {
                 showToast('📊 Leaderboard URL copied to clipboard!');
             };
-
+            
             const copyFallback = () => {
                 urlInput.select();
                 document.execCommand('copy');
                 showToast('📊 Leaderboard URL copied to clipboard!');
             };
-
+            
             navigator.clipboard.writeText(url)
                 .then(copySuccess)
                 .catch(copyFallback);
         }
-
+        
         function openLeaderboard() {
             const url = document.getElementById('leaderboardURLInput').value;
             window.open(url, '_blank', 'width=1200,height=800');
         }
-
+        
         function closeLeaderboardURL(event) {
             if (event && event.target.id !== 'leaderboardURLDialog') return;
             const dialog = document.getElementById('leaderboardURLDialog');
@@ -6427,41 +6442,41 @@
         }
 
         // Initialize on load
-        window.onload = function () {
+        window.onload = function() {
             // Load theme preferences
             const savedTheme = localStorage.getItem('theme') || 'light';
             const savedScheme = localStorage.getItem('colorScheme') || 'purple';
-
+            
             setTheme(savedTheme);
             setColorScheme(savedScheme);
-
+            
             // iPad keyboard fix - ensure inputs are focusable
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
             if (isIOS) {
                 console.log('📱 iPad detected - applying keyboard fixes');
                 // Force enable all text inputs for keyboard
                 document.querySelectorAll('input[type="text"], input[type="number"]').forEach(input => {
-                    input.addEventListener('touchstart', function (e) {
+                    input.addEventListener('touchstart', function(e) {
                         // Ensure the input is focusable
                         this.readOnly = false;
                         this.disabled = false;
                         // Prevent any parent elements from interfering
                         e.stopPropagation();
                     });
-                    input.addEventListener('touchend', function (e) {
+                    input.addEventListener('touchend', function(e) {
                         // Force focus and keyboard on touch end
                         e.preventDefault();
                         this.focus();
                         // Trigger click to ensure keyboard shows
                         this.click();
                     });
-                    input.addEventListener('focus', function () {
+                    input.addEventListener('focus', function() {
                         // Scroll input into view to ensure keyboard has room
                         this.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     });
                 });
             }
-
+            
             // Check for saved data
             const saved = localStorage.getItem('gameShowSetup');
             console.log('🔍 Checking for saved setup:', saved ? 'Found' : 'Not found');
@@ -6477,5 +6492,4 @@
     <!-- Christmas Enhancements 2025 -->
     <script src="gameshow-enhancements.js"></script>
 </body>
-
 </html>
