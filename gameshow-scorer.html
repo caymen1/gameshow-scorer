@@ -3347,10 +3347,140 @@
         </div>
     </div>
 
+    <!-- Resume Game Dialog -->
+    <div class="clear-data-dialog" id="resumeGameDialog">
+        <div class="clear-data-content">
+            <div class="clear-data-icon">🎮</div>
+            <h3 class="clear-data-title">Resume Game in Progress?</h3>
+            <p class="clear-data-message" id="resumeGameMessage">
+                You have an active game session that was interrupted.
+            </p>
+            <div class="clear-data-tip" style="background: #d4edda; border-left-color: #28a745; color: #155724;">
+                <strong>💡 Tip:</strong> You can continue from where you left off!
+            </div>
+            <div id="resumeGameDetails" style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: left;">
+                <!-- Game details will be populated here -->
+            </div>
+            <div class="clear-data-buttons">
+                <button class="clear-data-btn clear-data-btn-cancel" onclick="cancelResumeGame()">
+                    Start New Game
+                </button>
+                <button class="clear-data-btn clear-data-btn-confirm" onclick="confirmResumeGame()">
+                    Resume Game
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // ===================================================================
-        // FIREBASE CONFIGURATION
-        // ===================================================================
+        // ===== RESUME GAME FUNCTIONS =====
+        
+        function showResumeGameDialog(liveGameData) {
+            try {
+                const gameState = JSON.parse(liveGameData);
+                
+                // Populate game details
+                const detailsDiv = document.getElementById('resumeGameDetails');
+                const currentRound = gameState.currentRound || 1;
+                const totalRounds = gameState.totalRounds || 0;
+                const competitionName = gameState.competitionName || 'Competition';
+                const contestants = gameState.contestants || [];
+                
+                detailsDiv.innerHTML = `
+                    <div style="font-weight: 600; margin-bottom: 10px; font-size: 1.1em;">📊 ${competitionName}</div>
+                    <div style="margin-bottom: 5px;">🎯 Round: ${currentRound} of ${totalRounds}</div>
+                    <div style="margin-bottom: 5px;">👥 Contestants: ${contestants.length}</div>
+                    <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666;">
+                        Last updated: ${new Date(gameState.lastUpdated || Date.now()).toLocaleString()}
+                    </div>
+                `;
+                
+                document.getElementById('resumeGameDialog').classList.add('show');
+            } catch (error) {
+                console.error('Error showing resume dialog:', error);
+                // If we can't parse the game, just start fresh
+                localStorage.removeItem('liveGameState');
+            }
+        }
+        
+        function confirmResumeGame() {
+            console.log('🎮 Resuming game...');
+            
+            try {
+                // Load the live game state
+                const liveGameData = localStorage.getItem('liveGameState');
+                if (!liveGameData) {
+                    alert('Game data not found. Starting new game.');
+                    cancelResumeGame();
+                    return;
+                }
+                
+                const savedState = JSON.parse(liveGameData);
+                
+                // Restore global game state
+                gameState = {
+                    currentRound: savedState.currentRound || 1,
+                    currentQuestion: savedState.currentQuestion || 1,
+                    roundStarted: savedState.roundStarted || false,
+                    totalRounds: savedState.totalRounds,
+                    contestants: savedState.contestants,
+                    scoringRules: savedState.scoringRules,
+                    scores: savedState.scores || {},
+                    roundHistory: savedState.roundHistory || {},
+                    bonusPoints: savedState.bonusPoints || {},
+                    sessionId: savedState.sessionId,
+                    competitionName: savedState.competitionName
+                };
+                
+                // Restore session ID
+                gameSessionId = savedState.sessionId;
+                
+                // Update window reference
+                window.gameState = gameState;
+                
+                console.log('✅ Game state restored:', gameState);
+                
+                // Hide splash and dialogs
+                document.getElementById('splashScreen').classList.add('hidden');
+                document.getElementById('resumeGameDialog').classList.remove('show');
+                
+                // Show game screen
+                document.getElementById('gameScreen').classList.remove('hidden');
+                
+                // Update header
+                document.querySelector('.header h1').textContent = gameState.competitionName || '🎮 Game Show Scorer';
+                
+                // Load the current round
+                loadRound(gameState.currentRound);
+                
+                console.log('🎮 Game resumed successfully!');
+                
+            } catch (error) {
+                console.error('❌ Error resuming game:', error);
+                alert('Failed to resume game. Please start a new game.');
+                cancelResumeGame();
+            }
+        }
+        
+        function cancelResumeGame() {
+            console.log('🆕 Starting new game - clearing old game data');
+            
+            // Clear the live game state
+            localStorage.removeItem('liveGameState');
+            
+            // Hide dialog
+            document.getElementById('resumeGameDialog').classList.remove('show');
+            
+            // Check if there's saved setup to load
+            const saved = localStorage.getItem('gameShowSetup');
+            if (saved) {
+                setTimeout(() => {
+                    showLoadSetupDialog(saved);
+                }, 100);
+            }
+        }
+
+        // ===== FIREBASE CONFIGURATION =====
         // IMPORTANT: Replace this URL with your Firebase Realtime Database URL
         // Get it from: Firebase Console > Realtime Database > Copy database URL
         // Example: https://your-project-default-rtdb.firebaseio.com
@@ -6477,7 +6607,17 @@
                 });
             }
             
-            // Check for saved data
+            // Check for ACTIVE GAME first (priority!)
+            const liveGame = localStorage.getItem('liveGameState');
+            if (liveGame) {
+                console.log('🎮 Active game detected!');
+                setTimeout(() => {
+                    showResumeGameDialog(liveGame);
+                }, 100);
+                return; // Don't show setup dialog if game is active
+            }
+            
+            // Check for saved setup (no active game)
             const saved = localStorage.getItem('gameShowSetup');
             console.log('🔍 Checking for saved setup:', saved ? 'Found' : 'Not found');
             if (saved) {
