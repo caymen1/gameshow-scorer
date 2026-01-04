@@ -3440,11 +3440,18 @@
                 
                 console.log('✅ Game state restored:', gameState);
                 
-                // Hide splash and dialogs
+                // Hide ALL setup screens
                 document.getElementById('splashScreen').classList.add('hidden');
+                document.getElementById('initialSetup').classList.add('hidden');
+                document.getElementById('contestantsSetup').classList.add('hidden');
+                document.getElementById('roundsSetup').classList.add('hidden');
+                document.getElementById('scoringSetup').classList.add('hidden');
+                document.getElementById('questionViewScreen').classList.add('hidden');
+                
+                // Hide resume dialog
                 document.getElementById('resumeGameDialog').classList.remove('show');
                 
-                // Show game screen
+                // Show ONLY game screen
                 document.getElementById('gameScreen').classList.remove('hidden');
                 
                 // Update header
@@ -3453,7 +3460,7 @@
                 // Load the current round
                 loadRound(gameState.currentRound);
                 
-                console.log('🎮 Game resumed successfully!');
+                console.log('🎮 Game resumed successfully at Round', gameState.currentRound);
                 
             } catch (error) {
                 console.error('❌ Error resuming game:', error);
