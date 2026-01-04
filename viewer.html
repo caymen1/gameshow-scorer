@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contestant Scorecard</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,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">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        /* Color Schemes */
+        body.scheme-blue {
+            --primary-color: #3b82f6;
+            --secondary-color: #1e40af;
+        }
+
+        body.scheme-green {
+            --primary-color: #10b981;
+            --secondary-color: #047857;
+        }
+
+        body.scheme-orange {
+            --primary-color: #f97316;
+            --secondary-color: #c2410c;
+        }
+
+        body.scheme-red {
+            --primary-color: #ef4444;
+            --secondary-color: #b91c1c;
+        }
+
+        body.scheme-teal {
+            --primary-color: #14b8a6;
+            --secondary-color: #0f766e;
+        }
+
+        body.scheme-purple {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --card-bg: #2d2d2d;
+            --border-color: #404040;
+        }
+
+        body.dark-mode .container {
+            background: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        body.dark-mode .round-card {
+            background: #3a3a3a;
+            border-color: var(--border-color);
+        }
+
+        body.dark-mode .answer-section {
+            background: #3a3a3a;
+        }
+
+        body.dark-mode textarea {
+            background: #2d2d2d;
+            color: var(--text-color);
+            border-color: var(--border-color);
+        }
+
+        body.dark-mode .contestant-name {
+            color: var(--text-color);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .refresh-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 20px;
+        }
+
+        .refresh-icon:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(180deg);
+        }
+
+        .leaderboard-icon {
+            position: absolute;
+            top: 20px;
+            right: 70px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 20px;
+        }
+
+        .leaderboard-icon:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .settings-icon {
+            position: absolute;
+            top: 20px;
+            right: 120px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 20px;
+        }
+
+        .settings-icon:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        .menu-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 24px;
+            z-index: 100;
+        }
+
+        .menu-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .header-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .header-icons {
+                position: fixed;
+                top: 70px;
+                right: 20px;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 15px;
+                border-radius: 12px;
+                display: none;
+                z-index: 99;
+            }
+
+            .header-icons.show {
+                display: flex;
+            }
+
+            .leaderboard-icon,
+            .refresh-icon,
+            .settings-icon {
+                position: static;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+                padding-right: 50px;
+            }
+        }
+
+        /* Leaderboard Modal */
+        .leaderboard-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .leaderboard-modal.show {
+            display: flex;
+        }
+
+        .leaderboard-content {
+            background: white;
+            border-radius: 16px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .leaderboard-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .leaderboard-header h2 {
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        .leaderboard-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .leaderboard-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .leaderboard-list {
+            padding: 20px;
+        }
+
+        .leaderboard-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .leaderboard-item:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        .leaderboard-item.current-user {
+            background: #e7f3ff;
+            border: 2px solid #667eea;
+        }
+
+        .leaderboard-position {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .leaderboard-position.first {
+            color: #FFD700;
+        }
+
+        .leaderboard-position.second {
+            color: #C0C0C0;
+        }
+
+        .leaderboard-position.third {
+            color: #CD7F32;
+        }
+
+        .leaderboard-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 15px;
+            object-fit: cover;
+        }
+
+        .leaderboard-info {
+            flex: 1;
+        }
+
+        .leaderboard-name {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .leaderboard-score {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .leaderboard-score.positive {
+            color: #28a745;
+        }
+
+        .leaderboard-score.negative {
+            color: #dc3545;
+        }
+
+        .contestant-profile {
+            padding: 40px;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .contestant-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #667eea;
+            margin: 0 auto 20px;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contestant-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .total-score-display {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .total-score-display.positive {
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+        }
+
+        .total-score-display.negative {
+            background: linear-gradient(135deg, #f44336 0%, #da190b 100%);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .rounds-list {
+            list-style: none;
+        }
+
+        .round-item {
+            background: #f8f9fa;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .round-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .round-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .round-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .round-score {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .round-score.positive {
+            color: #4caf50;
+        }
+
+        .round-score.negative {
+            color: #f44336;
+        }
+
+        .round-score.zero {
+            color: #999;
+        }
+
+        .round-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1em;
+        }
+
+        .detail-item .label {
+            color: #666;
+        }
+
+        .detail-item .value {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .no-rounds {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 1.2em;
+        }
+
+        .no-rounds-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .error-message {
+            text-align: center;
+            padding: 60px 20px;
+            color: #f44336;
+        }
+
+        .error-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .auto-refresh-info {
+            text-align: center;
+            padding: 20px;
+            background: #e3f2fd;
+            color: #1976d2;
+            font-size: 0.9em;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Answer Submission Section */
+        .answer-section {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .answer-section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .answer-section-subtitle {
+            font-size: 1em;
+            color: #666;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .answer-input-group {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .answer-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            border: 3px solid #667eea;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .answer-input:focus {
+            outline: none;
+            border-color: #764ba2;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        .answer-input:disabled {
+            background: #f0f0f0;
+            border-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .answer-submit-btn {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.3em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .answer-submit-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .answer-submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .answer-status {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .answer-status.submitted {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+        }
+
+        .answer-status.waiting {
+            background: #fff3cd;
+            color: #856404;
+            border: 2px solid #ffeaa7;
+        }
+
+        .submitted-answer-display {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 15px;
+            border: 2px solid #667eea;
+        }
+
+        .submitted-answer-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .submitted-answer-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        body.dark-mode .answer-section {
+            background: #1a1a2e;
+        }
+
+        body.dark-mode .answer-section-title {
+            color: #8c9eff;
+        }
+
+        body.dark-mode .answer-section-subtitle {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .answer-input {
+            background: #16213e;
+            color: #e0e0e0;
+            border-color: #667eea;
+        }
+
+        body.dark-mode .submitted-answer-display {
+            background: #2c3e50;
+            border-color: #667eea;
+        }
+
+        body.dark-mode .submitted-answer-value {
+            color: #8c9eff;
+        }
+
+        .ranking-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #b8860b;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .loading {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .contestant-name {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .round-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Settings Dialog */
+        .settings-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+
+        .settings-overlay.show {
+            display: flex;
+        }
+
+        .settings-dialog {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            color: var(--text-color);
+        }
+
+        .settings-dialog h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+
+        .settings-section {
+            margin-bottom: 30px;
+        }
+
+        .settings-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .theme-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .theme-option {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        .theme-option:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .theme-option.active {
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+
+        .color-schemes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .color-scheme {
+            height: 60px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 3px solid transparent;
+            position: relative;
+        }
+
+        .color-scheme:hover {
+            transform: scale(1.05);
+        }
+
+        .color-scheme.active {
+            border-color: var(--text-color);
+        }
+
+        .color-scheme.active::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .scheme-purple-preview { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .scheme-blue-preview { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); }
+        .scheme-green-preview { background: linear-gradient(135deg, #10b981 0%, #047857 100%); }
+        .scheme-orange-preview { background: linear-gradient(135deg, #f97316 0%, #c2410c 100%); }
+        .scheme-red-preview { background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%); }
+        .scheme-teal-preview { background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%); }
+
+        .settings-close-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .settings-close-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="competitionTitle">Competition Scorecard</h1>
+            <div class="subtitle">Personal Progress Report</div>
+            
+            <!-- Mobile menu toggle -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            
+            <!-- Header icons container -->
+            <div class="header-icons" id="headerIcons">
+                <div class="leaderboard-icon" onclick="showLeaderboard(); closeMenu();" title="View Leaderboard">🏆</div>
+                <div class="refresh-icon" onclick="refreshData(); closeMenu();" title="Refresh">🔄</div>
+                <div class="settings-icon" onclick="openSettings(); closeMenu();" title="Settings">⚙️</div>
+            </div>
+        </div>
+
+        <div class="contestant-profile">
+            <img id="contestantAvatar" class="contestant-avatar" src="" alt="Contestant">
+            <div class="contestant-name" id="contestantName">Loading...</div>
+            <div id="rankingBadge"></div>
+            <div class="total-score-display" id="totalScore">0 points</div>
+        </div>
+
+        <div class="content">
+            <!-- Answer Submission Section (shown only for tablet rounds) -->
+            <div class="answer-section" id="answerSection" style="display: none;">
+                <div class="answer-section-title">📱 Submit Your Answer</div>
+                <div class="answer-section-subtitle" id="answerPrompt">Waiting for question...</div>
+                
+                <div class="answer-input-group">
+                    <input type="text" 
+                           id="answerInput" 
+                           class="answer-input" 
+                           placeholder="Type your answer here"
+                           disabled>
+                    <button id="answerSubmitBtn" 
+                            class="answer-submit-btn" 
+                            onclick="submitAnswer()"
+                            disabled>
+                        Submit Answer
+                    </button>
+                </div>
+
+                <div id="answerStatus"></div>
+            </div>
+
+            <div class="section-title">Round-by-Round Breakdown</div>
+            <ul class="rounds-list" id="roundsList">
+                <li class="loading">Loading your scores...</li>
+            </ul>
+
+            <div class="auto-refresh-info">
+                📡 This page auto-refreshes every 10 seconds to show the latest scores
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Scan your QR code anytime to view your latest scores</p>
+        </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div class="leaderboard-modal" id="leaderboardModal" onclick="closeLeaderboard(event)">
+        <div class="leaderboard-content" onclick="event.stopPropagation()">
+            <div class="leaderboard-header">
+                <h2>🏆 Leaderboard</h2>
+                <div class="leaderboard-close" onclick="closeLeaderboard()">×</div>
+            </div>
+            <div class="leaderboard-list" id="leaderboardList">
+                <!-- Leaderboard items will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Dialog -->
+    <div class="settings-overlay" id="settingsOverlay" onclick="closeSettings(event)">
+        <div class="settings-dialog" onclick="event.stopPropagation()">
+            <h2>⚙️ Settings</h2>
+            
+            <div class="settings-section">
+                <h3>Theme</h3>
+                <div class="theme-options">
+                    <div class="theme-option" id="lightTheme" onclick="setTheme('light')">
+                        ☀️<br>Light
+                    </div>
+                    <div class="theme-option active" id="darkTheme" onclick="setTheme('dark')">
+                        🌙<br>Dark
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>Color Scheme</h3>
+                <div class="color-schemes">
+                    <div class="color-scheme scheme-purple-preview active" data-scheme="purple" onclick="setColorScheme('purple')"></div>
+                    <div class="color-scheme scheme-blue-preview" data-scheme="blue" onclick="setColorScheme('blue')"></div>
+                    <div class="color-scheme scheme-green-preview" data-scheme="green" onclick="setColorScheme('green')"></div>
+                    <div class="color-scheme scheme-orange-preview" data-scheme="orange" onclick="setColorScheme('orange')"></div>
+                    <div class="color-scheme scheme-red-preview" data-scheme="red" onclick="setColorScheme('red')"></div>
+                    <div class="color-scheme scheme-teal-preview" data-scheme="teal" onclick="setColorScheme('teal')"></div>
+                </div>
+            </div>
+
+            <button class="settings-close-btn" onclick="closeSettings()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // ===================================================================
+        // FIREBASE CONFIGURATION
+        // ===================================================================
+        // IMPORTANT: Replace this URL with your Firebase Realtime Database URL
+        // Get it from: Firebase Console > Realtime Database > Copy database URL
+        // Example: https://your-project-default-rtdb.firebaseio.com
+        const FIREBASE_DATABASE_URL = 'https://gameshowscorer-default-rtdb.firebaseio.com';
+        
+        // Set this to true once you've added your Firebase URL above
+        const FIREBASE_ENABLED = true;
+        // ===================================================================
+
+        let contestantId = null;
+        let sessionId = null;
+        let contestantIndex = -1;
+        let currentRoundNumber = 0;
+        let currentQuestion = 1;
+        let questionsInRound = 1;
+        let refreshInterval = null;
+
+        // Submit answer to Firebase
+        async function submitAnswer() {
+            const answer = document.getElementById('answerInput').value.trim();
+            
+            if (!answer) {
+                alert('Please enter an answer');
+                return;
+            }
+
+            if (!sessionId || contestantIndex < 0) {
+                alert('Error: Missing session information');
+                return;
+            }
+
+            // Disable input and button
+            document.getElementById('answerInput').disabled = true;
+            document.getElementById('answerSubmitBtn').disabled = true;
+
+            // Save answer to Firebase
+            try {
+                // Include question number in path for multi-question rounds
+                const answerPath = questionsInRound > 1 
+                    ? `${currentRoundNumber}/q${currentQuestion}/${contestantIndex}`
+                    : `${currentRoundNumber}/${contestantIndex}`;
+                const url = `${FIREBASE_DATABASE_URL}/games/${sessionId}/answers/${answerPath}.json`;
+                console.log('📤 Submitting answer to:', url);
+                
+                const response = await fetch(url, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        answer: answer,
+                        timestamp: new Date().toISOString(),
+                        contestantName: document.getElementById('contestantName').textContent
+                    })
+                });
+
+                console.log('📥 Response status:', response.status, response.statusText);
+                console.log('📥 Response ok:', response.ok);
+
+                if (response.ok) {
+                    console.log('✅ Answer submitted successfully');
+                    
+                    // Hide the answer form (check if it exists first)
+                    const answerForm = document.getElementById('answerForm');
+                    if (answerForm) {
+                        answerForm.style.display = 'none';
+                    }
+                    
+                    // Show success status with submitted answer
+                    const statusDiv = document.getElementById('answerStatus');
+                    if (statusDiv) {
+                        statusDiv.className = 'answer-status submitted';
+                        statusDiv.style.display = 'block';
+                        statusDiv.innerHTML = `
+                            <div style="font-size: 1.2em; margin-bottom: 15px;">✓ Answer Submitted!</div>
+                            <div class="submitted-answer-display" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 10px;">
+                                <div style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">Your answer:</div>
+                                <div style="font-size: 1.3em; font-weight: bold;">${answer}</div>
+                            </div>
+                        `;
+                    }
+                } else {
+                    const errorText = await response.text();
+                    console.error('❌ Submit failed:', response.status, errorText);
+                    throw new Error(`HTTP ${response.status}: ${errorText}`);
+                }
+            } catch (error) {
+                console.error('❌ Error submitting answer:', error);
+                alert('Failed to submit answer. Please try again.');
+                // Re-enable input (with null checks)
+                const answerInput = document.getElementById('answerInput');
+                const submitBtn = document.getElementById('answerSubmitBtn');
+                if (answerInput) answerInput.disabled = false;
+                if (submitBtn) submitBtn.disabled = false;
+            }
+        }
+
+        // Check if current round needs answer submission
+        async function checkForTabletRound() {
+            console.log('=== CHECK FOR TABLET ROUND ===');
+            console.log('sessionId:', sessionId);
+            console.log('contestantIndex:', contestantIndex);
+            
+            if (!sessionId || contestantIndex < 0) {
+                console.log('Missing session ID or contestant index');
+                return;
+            }
+
+            try {
+                // Try Firebase first
+                let gameData = null;
+                
+                if (FIREBASE_ENABLED && FIREBASE_DATABASE_URL !== 'YOUR_FIREBASE_URL_HERE') {
+                    console.log('Attempting to load from Firebase...');
+                    gameData = await loadFromFirebase(sessionId);
+                    console.log('Firebase game data:', gameData);
+                    if (gameData) {
+                        window.liveGameState = gameData; // Make available to bonus display script
+                    }
+                }
+                
+                // Fallback to localStorage
+                if (!gameData) {
+                    console.log('Falling back to localStorage...');
+                    const localState = localStorage.getItem('liveGameState');
+                    if (localState) {
+                        gameData = JSON.parse(localState);
+                        console.log('localStorage game data:', gameData);
+                        window.liveGameState = gameData; // Make available to bonus display script
+                    }
+                }
+
+                if (!gameData) {
+                    console.log('❌ No game data available');
+                    return;
+                }
+
+                currentRoundNumber = gameData.currentRound;
+                console.log('Current round number:', currentRoundNumber);
+                
+                // Check if this round requires tablet - scoringRules should be in gameData
+                if (!gameData.scoringRules) {
+                    console.log('❌ No scoring rules found in game data');
+                    console.log('Game data keys:', Object.keys(gameData));
+                    return;
+                }
+
+                console.log('Scoring rules:', gameData.scoringRules);
+                
+                const currentRoundIndex = currentRoundNumber - 1;
+                const currentRoundRule = gameData.scoringRules[currentRoundIndex];
+                
+                console.log('Current round index:', currentRoundIndex);
+                console.log('Current round rule:', currentRoundRule);
+                
+                if (currentRoundRule && currentRoundRule.tabletRequired) {
+                    console.log('✅ This IS a tablet round!');
+                    
+                    // Check if round has been started by quizmaster
+                    if (!gameData.roundStarted) {
+                        console.log('⏳ Tablet round not started yet by quizmaster');
+                        hideAnswerSection();
+                        return;
+                    }
+                    
+                    console.log('✅ Round has been started - checking for existing answer');
+                    
+                    // Get current question number from game data and set globals
+                    const newQuestion = gameData.currentQuestion || 1;
+                    const newQuestionsInRound = currentRoundRule.questionsPerRound || 1;
+                    
+                    // Detect question change
+                    if (newQuestion !== currentQuestion) {
+                        console.log(`🔄 QUESTION CHANGED: ${currentQuestion} → ${newQuestion}`);
+                    }
+                    
+                    currentQuestion = newQuestion;
+                    questionsInRound = newQuestionsInRound;
+                    
+                    console.log(`Question ${currentQuestion} of ${questionsInRound}`);
+                    
+                    // Check if already answered
+                    let existingAnswer = null;
+                    
+                    if (FIREBASE_ENABLED && FIREBASE_DATABASE_URL !== 'YOUR_FIREBASE_URL_HERE') {
+                        // Include question number in path for multi-question rounds
+                        const answerPath = questionsInRound > 1 
+                            ? `${currentRoundNumber}/q${currentQuestion}/${contestantIndex}`
+                            : `${currentRoundNumber}/${contestantIndex}`;
+                        const answerUrl = `${FIREBASE_DATABASE_URL}/games/${sessionId}/answers/${answerPath}.json`;
+                        console.log('Checking for existing answer at:', answerUrl);
+                        const answerResponse = await fetch(answerUrl);
+                        
+                        if (answerResponse.ok) {
+                            existingAnswer = await answerResponse.json();
+                            console.log('Existing answer:', existingAnswer);
+                        }
+                    }
+                    
+                    // Build round name with question number if multi-question
+                    let displayRoundName = currentRoundRule.name;
+                    if (questionsInRound > 1) {
+                        displayRoundName = `Question ${currentQuestion} of ${questionsInRound}`;
+                    }
+                    
+                    if (existingAnswer && existingAnswer.answer) {
+                        // Already answered
+                        console.log('Already answered:', existingAnswer.answer);
+                        showAnswerSection(true, existingAnswer.answer, displayRoundName);
+                    } else {
+                        // Need to answer
+                        console.log('Need to submit answer');
+                        showAnswerSection(false, null, displayRoundName);
+                    }
+                    return;
+                }
+                
+                // Not a tablet round
+                console.log('❌ Not a tablet round (tabletRequired:', currentRoundRule?.tabletRequired, ')');
+                hideAnswerSection();
+            } catch (error) {
+                console.error('❌ Error checking tablet round:', error);
+            }
+        }
+
+        // Show answer submission section
+        function showAnswerSection(alreadyAnswered, existingAnswer, roundName) {
+            const section = document.getElementById('answerSection');
+            const input = document.getElementById('answerInput');
+            const button = document.getElementById('answerSubmitBtn');
+            const status = document.getElementById('answerStatus');
+            const prompt = document.getElementById('answerPrompt');
+            const answerForm = document.getElementById('answerForm');
+
+            // Guard against missing elements
+            if (!section) {
+                console.error('❌ answerSection element not found');
+                return;
+            }
+
+            section.style.display = 'block';
+            if (prompt) prompt.textContent = `Round: ${roundName}`;
+
+            if (alreadyAnswered) {
+                // Hide the answer form
+                if (answerForm) answerForm.style.display = 'none';
+                
+                // Show submitted answer
+                if (status) {
+                    status.className = 'answer-status submitted';
+                    status.style.display = 'block';
+                    status.innerHTML = `
+                        <div style="font-size: 1.2em; margin-bottom: 15px;">✓ Answer Submitted!</div>
+                        <div class="submitted-answer-display" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 10px;">
+                            <div style="font-size: 0.9em; opacity: 0.8; margin-bottom: 5px;">Your answer:</div>
+                            <div style="font-size: 1.3em; font-weight: bold;">${existingAnswer}</div>
+                        </div>
+                    `;
+                }
+            } else {
+                // IMPORTANT FIX: Only clear input if it's currently empty
+                // This preserves text that the contestant is typing during refresh
+                if (input && input.value === '') {
+                    input.value = '';
+                }
+                // If input already has text, DON'T clear it - keep what they've typed!
+                
+                if (input) input.disabled = false;
+                if (button) button.disabled = false;
+                if (status) {
+                    status.className = 'answer-status waiting';
+                    status.innerHTML = '⏳ Waiting for your answer...';
+                }
+            }
+        }
+
+        // Hide answer submission section
+        function hideAnswerSection() {
+            document.getElementById('answerSection').style.display = 'none';
+        }
+
+        // Load game data from Firebase
+        async function loadFromFirebase(sessionId) {
+            if (!FIREBASE_ENABLED || !FIREBASE_DATABASE_URL || FIREBASE_DATABASE_URL === 'YOUR_FIREBASE_URL_HERE') {
+                return null;
+            }
+
+            try {
+                const url = `${FIREBASE_DATABASE_URL}/games/${sessionId}.json`;
+                const response = await fetch(url);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    return data;
+                }
+                return null;
+            } catch (error) {
+                console.error('Firebase error:', error);
+                return null;
+            }
+        }
+
+        // Extract contestant ID and session ID from URL
+        function getURLParameters() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                id: params.get('id'),
+                session: params.get('session')
+            };
+        }
+
+        // Load and display contestant data
+        async function loadContestantData() {
+            const urlParams = getURLParameters();
+            contestantId = urlParams.id;
+            sessionId = urlParams.session;
+
+            if (!contestantId) {
+                showError('No contestant ID provided in URL');
+                return;
+            }
+
+            let gameData = null;
+            let liveGameState = null;
+
+            // Try Firebase first if enabled and session ID provided
+            if (sessionId && FIREBASE_ENABLED) {
+                const firebaseData = await loadFromFirebase(sessionId);
+                if (firebaseData) {
+                    console.log('✅ Loaded from Firebase');
+                    liveGameState = firebaseData;
+                    window.liveGameState = firebaseData; // Make available to bonus display script
+                    // Also need the setup data
+                    gameData = {
+                        competitionName: firebaseData.competitionName,
+                        contestants: firebaseData.contestants
+                    };
+                }
+            }
+
+            // Fallback to localStorage
+            if (!gameData) {
+                console.log('📦 Using localStorage fallback');
+                const localSetup = localStorage.getItem('gameShowSetup');
+                const localState = localStorage.getItem('liveGameState');
+                
+                if (!localSetup) {
+                    showError('No game data found. Please ensure the game has been set up.');
+                    return;
+                }
+                
+                gameData = JSON.parse(localSetup);
+                if (localState) {
+                    liveGameState = JSON.parse(localState);
+                }
+            }
+
+            // Extract date from contestant ID
+            // New format: mum20251229-140530 (name + CCYYMMDD-HHMMSS)
+            // Old format: mum20251229 (name + CCYYMMDD) - still support this
+            console.log('Raw contestant ID:', contestantId);
+            
+            let dateStr, timeStr;
+            if (contestantId.includes('-')) {
+                // New format with time
+                const parts = contestantId.split('-');
+                console.log('Split parts:', parts);
+                // parts = ['gil20251229', '185212', 'sessionstuff...'] if session in URL
+                // We want everything before the last dash that's a date
+                
+                // Find where the date starts (8 digits before last meaningful dash)
+                const nameAndDate = parts[0]; // e.g., 'gil20251229'
+                const namePrefix = nameAndDate.replace(/\d+$/, '').toLowerCase(); // Remove trailing digits
+                
+                console.log('Name prefix extracted:', namePrefix);
+            } else {
+                // Old format without time
+                dateStr = contestantId.slice(-8);
+                timeStr = '';
+            }
+            
+            const namePrefix = contestantId.split(/\d/)[0].toLowerCase(); // Everything before first digit
+            console.log('Final name prefix for matching:', namePrefix);
+
+            // Find matching contestant
+            let matchedContestant = null;
+
+            console.log('Looking for contestant with prefix:', namePrefix);
+            console.log('Available contestants:', gameData.contestants);
+
+            gameData.contestants.forEach((contestant, idx) => {
+                const contestantPrefix = contestant.name.trim().substring(0, 3).toLowerCase().replace(/\s/g, '');
+                console.log(`Contestant ${idx}: "${contestant.name}" -> prefix: "${contestantPrefix}"`);
+                
+                if (contestantPrefix === namePrefix) {
+                    matchedContestant = contestant;
+                    contestantIndex = idx; // This sets the GLOBAL contestantIndex
+                    window.contestantIndex = idx; // Make available to bonus display script
+                    console.log(`✅ MATCH FOUND at index ${idx}! Global contestantIndex now: ${contestantIndex}`);
+                }
+            });
+
+            console.log('After matching loop, contestantIndex:', contestantIndex);
+
+            if (!matchedContestant) {
+                showError('Contestant not found');
+                return;
+            }
+
+            // Get contestant's round history and score
+            let roundHistory = [];
+            let totalScore = 0;
+
+            if (liveGameState && liveGameState.roundHistory && liveGameState.roundHistory[contestantIndex]) {
+                roundHistory = liveGameState.roundHistory[contestantIndex];
+                totalScore = liveGameState.scores[contestantIndex] || 0;
+            }
+
+            // Display contestant info
+            displayContestantInfo(matchedContestant, totalScore, gameData.competitionName);
+
+            // Display round history
+            displayRoundHistory(roundHistory, totalScore);
+
+            // Calculate and display ranking if game has started
+            if (liveGameState) {
+                displayRanking(contestantIndex, liveGameState);
+            }
+
+            // Check if current round needs tablet input
+            await checkForTabletRound();
+            
+            // Set up continuous polling to detect question changes (every 3 seconds)
+            setInterval(async () => {
+                await checkForTabletRound();
+            }, 3000);
+        }
+
+        // Display contestant profile
+        function displayContestantInfo(contestant, totalScore, competitionName) {
+            document.getElementById('competitionTitle').textContent = competitionName + ' Scorecard';
+            document.getElementById('contestantName').textContent = contestant.name;
+            
+            // Update browser tab title
+            document.title = `${contestant.name} - Scorecard`;
+            
+            if (contestant.avatar) {
+                document.getElementById('contestantAvatar').src = contestant.avatar;
+            } else {
+                document.getElementById('contestantAvatar').src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0iIzY2N2VlYSIvPjx0ZXh0IHg9IjUwIiB5PSI2MCIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCI+8J+RqDwvdGV4dD48L3N2Zz4=';
+            }
+
+            const totalScoreEl = document.getElementById('totalScore');
+            const scoreClass = totalScore > 0 ? 'positive' : totalScore < 0 ? 'negative' : '';
+            const scoreSign = totalScore > 0 ? '+' : '';
+            
+            totalScoreEl.textContent = `${scoreSign}${totalScore} points`;
+            totalScoreEl.className = `total-score-display ${scoreClass}`;
+        }
+
+        // Display round history
+        function displayRoundHistory(roundHistory, totalScore) {
+            const roundsList = document.getElementById('roundsList');
+            roundsList.innerHTML = '';
+
+            if (roundHistory.length === 0) {
+                roundsList.innerHTML = `
+                    <li class="no-rounds">
+                        <div class="no-rounds-icon">⏳</div>
+                        <div>No rounds played yet</div>
+                        <div style="margin-top: 10px; font-size: 0.9em;">Your scores will appear here once the game starts</div>
+                    </li>
+                `;
+                return;
+            }
+
+            roundHistory.forEach((round) => {
+                const scoreClass = round.roundScore > 0 ? 'positive' : round.roundScore < 0 ? 'negative' : 'zero';
+                const scoreSign = round.roundScore > 0 ? '+' : '';
+
+                const item = document.createElement('li');
+                item.className = 'round-item';
+                item.innerHTML = `
+                    <div class="round-header">
+                        <div class="round-name">${round.roundName}</div>
+                        <div class="round-score ${scoreClass}">${scoreSign}${round.roundScore}</div>
+                    </div>
+                    <div class="round-details">
+                        <div class="detail-item">
+                            <span class="label">✓ Correct:</span>
+                            <span class="value">${round.correct} × ${round.correctPoints} = ${round.correct * round.correctPoints}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">✗ Wrong:</span>
+                            <span class="value">${round.wrong} × ${round.incorrectPoints} = ${round.wrong * round.incorrectPoints}</span>
+                        </div>
+                    </div>
+                `;
+                roundsList.appendChild(item);
+            });
+        }
+
+        // Display ranking
+        function displayRanking(contestantIndex, gameState) {
+            const standings = gameState.contestants.map((contestant, idx) => ({
+                name: contestant.name,
+                score: gameState.scores[idx] || 0,
+                index: idx
+            }));
+
+            // Sort by score (highest first), then alphabetically by name for ties
+            standings.sort((a, b) => {
+                if (b.score !== a.score) return b.score - a.score;
+                return a.name.localeCompare(b.name);
+            });
+
+            // Calculate position with ties
+            let currentPosition = 1;
+            let previousScore = null;
+            let contestantsAtCurrentPosition = 0;
+            let myPosition = null;
+
+            standings.forEach((contestant, idx) => {
+                // Determine position
+                if (previousScore === null || contestant.score === previousScore) {
+                    // Same score as previous (or first contestant) - share position
+                    contestantsAtCurrentPosition++;
+                } else {
+                    // Different score - move to next position
+                    currentPosition += contestantsAtCurrentPosition;
+                    contestantsAtCurrentPosition = 1;
+                }
+                
+                // Check if this is the current contestant
+                if (contestant.index === contestantIndex) {
+                    myPosition = currentPosition;
+                }
+                
+                previousScore = contestant.score;
+            });
+
+            const suffix = myPosition === 1 ? 'st' : myPosition === 2 ? 'nd' : myPosition === 3 ? 'rd' : 'th';
+
+            const rankingBadge = document.getElementById('rankingBadge');
+            rankingBadge.innerHTML = `<span class="ranking-badge">🏆 ${myPosition}${suffix} Place</span>`;
+        }
+
+        // Show error
+        function showError(message) {
+            const roundsList = document.getElementById('roundsList');
+            roundsList.innerHTML = `
+                <li class="error-message">
+                    <div class="error-icon">⚠️</div>
+                    <div>${message}</div>
+                </li>
+            `;
+            document.getElementById('contestantName').textContent = 'Error';
+        }
+
+        // Refresh data
+        function refreshData() {
+            loadContestantData();
+        }
+
+        // Leaderboard functions
+        async function showLeaderboard() {
+            console.log('🏆 Leaderboard clicked');
+            const modal = document.getElementById('leaderboardModal');
+            const list = document.getElementById('leaderboardList');
+            
+            console.log('Modal element:', modal);
+            console.log('List element:', list);
+            
+            // Show modal immediately with loading state
+            list.innerHTML = '<p style="text-align: center; padding: 20px; color: #666;">Loading leaderboard...</p>';
+            modal.classList.add('show');
+            
+            // Get game data - try Firebase first, then localStorage
+            let gameData = null;
+            
+            if (FIREBASE_ENABLED && sessionId) {
+                try {
+                    const response = await fetch(`${FIREBASE_DATABASE_URL}/games/${sessionId}.json`);
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data) {
+                            gameData = data;
+                        }
+                    }
+                } catch (err) {
+                    console.log('Firebase load failed, using localStorage:', err);
+                }
+            }
+            
+            // Fallback to localStorage
+            if (!gameData) {
+                const localState = localStorage.getItem('liveGameState');
+                if (localState) {
+                    gameData = JSON.parse(localState);
+                }
+            }
+            
+            console.log('Game data:', gameData);
+            
+            if (!gameData || !gameData.contestants) {
+                console.log('No game data available');
+                list.innerHTML = '<p style="text-align: center; padding: 20px; color: #666;">No leaderboard data available yet.</p>';
+                return;
+            }
+            
+            console.log('Building leaderboard with', gameData.contestants.length, 'contestants');
+            
+            // Create standings array
+            const standings = gameData.contestants.map((contestant, idx) => ({
+                name: contestant.name,
+                avatar: contestant.avatar,
+                score: gameData.scores[idx] || 0,
+                index: idx
+            }));
+            
+            // Sort by score (highest first), then alphabetically by name for ties
+            standings.sort((a, b) => {
+                if (b.score !== a.score) {
+                    return b.score - a.score; // Higher score first
+                }
+                return a.name.localeCompare(b.name); // Alphabetical for same score
+            });
+            
+            // Calculate positions with ties
+            let currentPosition = 1;
+            let previousScore = null;
+            let contestantsAtCurrentPosition = 0;
+            
+            // Build leaderboard HTML
+            list.innerHTML = '';
+            standings.forEach((contestant, idx) => {
+                // Determine position
+                if (previousScore === null || contestant.score === previousScore) {
+                    // Same score as previous (or first contestant) - share position
+                    contestantsAtCurrentPosition++;
+                } else {
+                    // Different score - move to next position
+                    currentPosition += contestantsAtCurrentPosition;
+                    contestantsAtCurrentPosition = 1;
+                }
+                
+                const rank = currentPosition;
+                previousScore = contestant.score;
+                const isCurrentUser = contestant.index === contestantIndex;
+                const scoreClass = contestant.score > 0 ? 'positive' : contestant.score < 0 ? 'negative' : '';
+                const scoreSign = contestant.score > 0 ? '+' : '';
+                
+                let positionClass = '';
+                let medal = '';
+                if (rank === 1) {
+                    positionClass = 'first';
+                    medal = '🥇';
+                } else if (rank === 2) {
+                    positionClass = 'second';
+                    medal = '🥈';
+                } else if (rank === 3) {
+                    positionClass = 'third';
+                    medal = '🥉';
+                }
+                
+                const item = document.createElement('div');
+                item.className = `leaderboard-item ${isCurrentUser ? 'current-user' : ''}`;
+                item.innerHTML = `
+                    <div class="leaderboard-position ${positionClass}">${medal || rank}</div>
+                    <img src="${contestant.avatar || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0iIzY2N2VlYSIvPjx0ZXh0IHg9IjUwIiB5PSI2MCIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCI+8J+RqDwvdGV4dD48L3N2Zz4='}" 
+                         class="leaderboard-avatar" 
+                         alt="${contestant.name}">
+                    <div class="leaderboard-info">
+                        <div class="leaderboard-name">${contestant.name}${isCurrentUser ? ' (You)' : ''}</div>
+                    </div>
+                    <div class="leaderboard-score ${scoreClass}">${scoreSign}${contestant.score}</div>
+                `;
+                list.appendChild(item);
+            });
+            
+            console.log('✅ Adding show class to modal');
+            modal.classList.add('show');
+            console.log('Modal classes:', modal.className);
+        }
+        
+        function closeLeaderboard(event) {
+            if (event && event.target.id !== 'leaderboardModal') return;
+            document.getElementById('leaderboardModal').classList.remove('show');
+        }
+
+        // Settings and Theme functions
+        let currentTheme = 'light';
+        let currentColorScheme = 'purple';
+
+        function toggleMenu() {
+            const menu = document.getElementById('headerIcons');
+            menu.classList.toggle('show');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('headerIcons');
+            menu.classList.remove('show');
+        }
+
+        function openSettings() {
+            document.getElementById('settingsOverlay').classList.add('show');
+        }
+
+        function closeSettings(event) {
+            if (!event || event.target === document.getElementById('settingsOverlay')) {
+                document.getElementById('settingsOverlay').classList.remove('show');
+            }
+        }
+
+        function setTheme(theme) {
+            currentTheme = theme;
+            
+            // Update active state
+            document.getElementById('lightTheme').classList.remove('active');
+            document.getElementById('darkTheme').classList.remove('active');
+            
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('darkTheme').classList.add('active');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.getElementById('lightTheme').classList.add('active');
+            }
+            
+            // Save preference
+            localStorage.setItem('viewer-theme', theme);
+        }
+
+        function setColorScheme(scheme) {
+            currentColorScheme = scheme;
+            
+            // Remove all scheme classes
+            document.body.classList.remove('scheme-purple', 'scheme-blue', 'scheme-green', 
+                                          'scheme-orange', 'scheme-red', 'scheme-teal');
+            
+            // Add new scheme
+            document.body.classList.add(`scheme-${scheme}`);
+            
+            // Update active state
+            document.querySelectorAll('.color-scheme').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelector(`[data-scheme="${scheme}"]`).classList.add('active');
+            
+            // Save preference
+            localStorage.setItem('viewer-colorScheme', scheme);
+        }
+
+        // Initialize on load
+        window.onload = function() {
+            // Load theme preferences
+            const savedTheme = localStorage.getItem('viewer-theme') || 'light';
+            const savedScheme = localStorage.getItem('viewer-colorScheme') || 'purple';
+            
+            setTheme(savedTheme);
+            setColorScheme(savedScheme);
+            
+            loadContestantData();
+
+            // Auto-refresh every 10 seconds
+            refreshInterval = setInterval(refreshData, 10000);
+        };
+
+        // Clear interval on page unload
+        window.onbeforeunload = function() {
+            if (refreshInterval) {
+                clearInterval(refreshInterval);
+            }
+        };
+    </script>
+    
+    <!-- Bonus Points Display Enhancement -->
+    <script src="viewer-bonus-display.js"></script>
+</body>
+</html>

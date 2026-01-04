@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Games - Host Control Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #8b5cf6;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-tertiary: #94a3b8;
+            --border: #e2e8f0;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-lg: rgba(0, 0, 0, 0.15);
+        }
+
+        [data-theme="dark"] {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #a78bfa;
+            --success: #34d399;
+            --danger: #f87171;
+            --warning: #fbbf24;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-tertiary: #64748b;
+            --border: #334155;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --shadow-lg: rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            font-size: 36px;
+        }
+
+        .header-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Session Info */
+        .session-info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .session-id {
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px var(--shadow);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px var(--shadow-lg);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow-lg);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-warning {
+            background: var(--warning);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        /* Setup Section */
+        .setup-section {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Contestants Grid */
+        .contestants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .contestant-input-wrapper {
+            position: relative;
+        }
+
+        .contestant-input {
+            width: 100%;
+            padding-right: 40px;
+        }
+
+        .remove-contestant {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--danger);
+            color: white;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            line-height: 1;
+            transition: all 0.3s ease;
+        }
+
+        .remove-contestant:hover {
+            background: #dc2626;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .add-contestant-btn {
+            margin-top: 10px;
+        }
+
+        /* Game Status */
+        .game-status {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .status-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .status-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .status-value {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        /* Current Round */
+        .round-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .round-btn {
+            padding: 15px;
+            background: var(--bg-tertiary);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .round-btn:hover {
+            background: var(--bg-secondary);
+            border-color: var(--primary);
+        }
+
+        .round-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Scoreboard */
+        .scoreboard {
+            display: grid;
+            gap: 15px;
+        }
+
+        .player-row {
+            display: grid;
+            grid-template-columns: 50px 1fr auto auto;
+            gap: 15px;
+            align-items: center;
+            background: var(--bg-tertiary);
+            padding: 15px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .player-row:hover {
+            background: var(--bg-secondary);
+            transform: translateX(5px);
+        }
+
+        .player-position {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-tertiary);
+            text-align: center;
+        }
+
+        .player-position.top {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .player-name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .player-score {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            min-width: 60px;
+            text-align: right;
+        }
+
+        .score-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .score-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .score-btn.plus {
+            background: var(--success);
+            color: white;
+        }
+
+        .score-btn.minus {
+            background: var(--danger);
+            color: white;
+        }
+
+        .score-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 22px;
+            }
+
+            .logo-icon {
+                font-size: 28px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .card-title {
+                font-size: 18px;
+            }
+
+            .player-row {
+                grid-template-columns: 40px 1fr auto;
+                gap: 10px;
+                padding: 12px 15px;
+            }
+
+            .score-controls {
+                grid-column: 1 / -1;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .player-position {
+                font-size: 20px;
+            }
+
+            .player-name {
+                font-size: 16px;
+            }
+
+            .player-score {
+                font-size: 20px;
+            }
+
+            .status-value {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contestants-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .round-selector {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Question Grid */
+        .question-grid-container {
+            margin: 30px 0;
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .question-btn {
+            aspect-ratio: 1;
+            border: 2px solid var(--border);
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .question-btn:hover {
+            background: var(--bg-secondary);
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .question-btn.filled {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+
+        .question-btn.filled:hover {
+            background: #059669;
+        }
+
+        /* Question Navigation */
+        .question-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border);
+        }
+
+        .round-progress {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .round-progress span {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            border: 3px solid var(--border);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive for Question Grid */
+        @media (max-width: 768px) {
+            .question-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 12px;
+            }
+
+            .question-btn {
+                font-size: 18px;
+            }
+
+            .question-nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .question-nav .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .question-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+
+            .question-btn {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🏠</span>
+                    <span>House of Games</span>
+                </div>
+                <div class="header-controls">
+                    <div class="session-info hidden" id="sessionInfo">
+                        <span>Session:</span>
+                        <span class="session-id" id="sessionId">-</span>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span id="themeIcon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Setup Section -->
+        <div class="card" id="setupSection">
+            <div class="card-header">
+                <h2 class="card-title">Game Setup</h2>
+            </div>
+            <div class="setup-section">
+                <div class="form-group">
+                    <label for="gameTitle">Game Title</label>
+                    <input type="text" id="gameTitle" placeholder="e.g., House of Games - Episode 1" value="House of Games">
+                </div>
+
+                <div class="form-group">
+                    <label for="numberOfRounds">Number of Rounds</label>
+                    <input type="number" id="numberOfRounds" min="1" max="10" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label>Contestants</label>
+                    <div class="contestants-grid" id="contestantsGrid">
+                        <div class="contestant-input-wrapper">
+                            <input type="text" class="contestant-input" placeholder="Contestant 1" value="Player 1">
+                        </div>
+                        <div class="contestant-input-wrapper">
+                            <input type="text" class="contestant-input" placeholder="Contestant 2" value="Player 2">
+                        </div>
+                        <div class="contestant-input-wrapper">
+                            <input type="text" class="contestant-input" placeholder="Contestant 3" value="Player 3">
+                        </div>
+                        <div class="contestant-input-wrapper">
+                            <input type="text" class="contestant-input" placeholder="Contestant 4" value="Player 4">
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary btn-sm add-contestant-btn" onclick="addContestant()">
+                        + Add Contestant
+                    </button>
+                </div>
+
+                <button class="btn btn-primary" onclick="proceedToQuestions()">
+                    Continue ➜
+                </button>
+            </div>
+        </div>
+
+        <!-- Question Creation Prompt -->
+        <div class="card hidden" id="questionPromptSection">
+            <div class="card-header">
+                <h2 class="card-title">Question Setup</h2>
+            </div>
+            <div class="setup-section">
+                <p style="font-size: 18px; margin-bottom: 30px; color: var(--text-secondary);">
+                    Would you like to create questions for each round?
+                </p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <button class="btn btn-primary" onclick="startQuestionCreation()">
+                        ✏️ Yes, Create Questions
+                    </button>
+                    <button class="btn btn-secondary" onclick="skipQuestions()">
+                        ⏭️ No, Skip to Game
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question Creation Section -->
+        <div class="card hidden" id="questionCreationSection">
+            <div class="card-header">
+                <h2 class="card-title" id="questionRoundTitle">Round 1</h2>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-secondary btn-sm" onclick="saveAndExit()">
+                        💾 Save & Exit
+                    </button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="roundName">Round Name (Optional)</label>
+                <input type="text" id="roundName" placeholder="e.g., Answer Smash, Quick Fire, etc.">
+            </div>
+
+            <div class="question-grid-container">
+                <div class="question-grid" id="questionGrid">
+                    <!-- 5x5 grid will be generated here -->
+                </div>
+            </div>
+
+            <div class="question-nav">
+                <button class="btn btn-secondary" id="prevRoundBtn" onclick="previousRound()">
+                    ← Previous Round
+                </button>
+                <div class="round-progress" id="roundProgress">
+                    Round <span id="currentQuestionRound">1</span> of <span id="totalQuestionRounds">5</span>
+                </div>
+                <button class="btn btn-primary" id="nextRoundBtn" onclick="nextRound()">
+                    Next Round →
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Control Section -->
+        <div class="card hidden" id="gameSection">
+            <div class="card-header">
+                <h2 class="card-title">Game Control</h2>
+                <button class="btn btn-danger btn-sm" onclick="endGame()">
+                    🛑 End Game
+                </button>
+            </div>
+
+            <!-- Game Status -->
+            <div class="game-status">
+                <div class="status-card">
+                    <div class="status-label">Current Round</div>
+                    <div class="status-value" id="currentRoundDisplay">1</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-label">Total Rounds</div>
+                    <div class="status-value" id="totalRoundsDisplay">5</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-label">Players</div>
+                    <div class="status-value" id="playersCountDisplay">4</div>
+                </div>
+            </div>
+
+            <!-- Round Selector -->
+            <div class="form-group">
+                <label>Select Round</label>
+                <div class="round-selector" id="roundSelector">
+                    <!-- Rounds will be generated here -->
+                </div>
+            </div>
+
+            <!-- Scoreboard -->
+            <div class="form-group">
+                <label>Scoreboard</label>
+                <div class="scoreboard" id="scoreboard">
+                    <!-- Players will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Firebase Configuration
+        const FIREBASE_DATABASE_URL = 'https://your-project-default-rtdb.firebaseio.com';
+        const FIREBASE_ENABLED = false; // Set to true when Firebase is configured
+
+        // Game State
+        let gameState = {
+            sessionId: null,
+            gameTitle: '',
+            contestants: [],
+            currentRound: 1,
+            totalRounds: 5,
+            scores: {},
+            roundHistory: {},
+            gameStarted: false,
+            rounds: [] // Array to store round data including questions
+        };
+
+        // Question Creation State
+        let questionState = {
+            currentRoundIndex: 0,
+            rounds: []
+        };
+
+        // Theme Management
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        let currentTheme = localStorage.getItem('theme') || 'light';
+
+        function setTheme(theme) {
+            currentTheme = theme;
+            document.documentElement.setAttribute('data-theme', theme);
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('theme', theme);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // Initialize theme
+        setTheme(currentTheme);
+
+        // Generate Session ID
+        function generateSessionId() {
+            return 'HOG-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+        }
+
+        // Add Contestant
+        function addContestant() {
+            const grid = document.getElementById('contestantsGrid');
+            const count = grid.children.length + 1;
+            const wrapper = document.createElement('div');
+            wrapper.className = 'contestant-input-wrapper';
+            wrapper.innerHTML = `
+                <input type="text" class="contestant-input" placeholder="Contestant ${count}">
+                <button class="remove-contestant" onclick="removeContestant(this)">×</button>
+            `;
+            grid.appendChild(wrapper);
+        }
+
+        // Remove Contestant
+        function removeContestant(btn) {
+            const grid = document.getElementById('contestantsGrid');
+            if (grid.children.length > 2) {
+                btn.parentElement.remove();
+            } else {
+                alert('You must have at least 2 contestants!');
+            }
+        }
+
+        // Proceed to Question Setup Prompt
+        function proceedToQuestions() {
+            const gameTitle = document.getElementById('gameTitle').value.trim();
+            const numberOfRounds = parseInt(document.getElementById('numberOfRounds').value);
+            const contestantInputs = document.querySelectorAll('.contestant-input');
+            
+            // Validate
+            if (!gameTitle) {
+                alert('Please enter a game title');
+                return;
+            }
+
+            const contestants = Array.from(contestantInputs)
+                .map(input => input.value.trim())
+                .filter(name => name !== '');
+
+            if (contestants.length < 2) {
+                alert('Please add at least 2 contestants with names');
+                return;
+            }
+
+            // Store setup data temporarily
+            gameState.gameTitle = gameTitle;
+            gameState.contestants = contestants;
+            gameState.totalRounds = numberOfRounds;
+
+            // Show question prompt
+            document.getElementById('setupSection').classList.add('hidden');
+            document.getElementById('questionPromptSection').classList.remove('hidden');
+        }
+
+        // Start Question Creation
+        function startQuestionCreation() {
+            // Initialize question state
+            questionState.currentRoundIndex = 0;
+            questionState.rounds = [];
+            
+            for (let i = 0; i < gameState.totalRounds; i++) {
+                questionState.rounds.push({
+                    roundNumber: i + 1,
+                    roundName: '',
+                    questions: Array(25).fill(null) // 5x5 grid = 25 questions
+                });
+            }
+
+            // Show first round
+            document.getElementById('questionPromptSection').classList.add('hidden');
+            document.getElementById('questionCreationSection').classList.remove('hidden');
+            
+            renderQuestionRound(0);
+        }
+
+        // Skip Questions and Start Game
+        function skipQuestions() {
+            document.getElementById('questionPromptSection').classList.add('hidden');
+            startGame();
+        }
+
+        // Render Question Round
+        function renderQuestionRound(roundIndex) {
+            questionState.currentRoundIndex = roundIndex;
+            const round = questionState.rounds[roundIndex];
+
+            // Update header
+            document.getElementById('questionRoundTitle').textContent = `Round ${round.roundNumber}`;
+            document.getElementById('roundName').value = round.roundName || '';
+            
+            // Update progress
+            document.getElementById('currentQuestionRound').textContent = round.roundNumber;
+            document.getElementById('totalQuestionRounds').textContent = gameState.totalRounds;
+
+            // Generate 5x5 grid
+            const grid = document.getElementById('questionGrid');
+            grid.innerHTML = '';
+            
+            for (let i = 0; i < 25; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'question-btn';
+                btn.textContent = i + 1;
+                btn.onclick = () => editQuestion(i);
+                
+                if (round.questions[i]) {
+                    btn.classList.add('filled');
+                }
+                
+                grid.appendChild(btn);
+            }
+
+            // Update navigation buttons
+            document.getElementById('prevRoundBtn').disabled = roundIndex === 0;
+            
+            const nextBtn = document.getElementById('nextRoundBtn');
+            if (roundIndex === gameState.totalRounds - 1) {
+                nextBtn.textContent = 'Finish & Start Game ✓';
+                nextBtn.onclick = finishQuestionCreation;
+            } else {
+                nextBtn.textContent = 'Next Round →';
+                nextBtn.onclick = nextRound;
+            }
+        }
+
+        // Edit Question (placeholder for now)
+        function editQuestion(questionIndex) {
+            // This will be expanded later
+            alert(`Question ${questionIndex + 1} - Functionality coming soon!`);
+        }
+
+        // Previous Round
+        function previousRound() {
+            if (questionState.currentRoundIndex > 0) {
+                // Save current round name
+                saveCurrentRoundName();
+                renderQuestionRound(questionState.currentRoundIndex - 1);
+            }
+        }
+
+        // Next Round
+        function nextRound() {
+            if (questionState.currentRoundIndex < gameState.totalRounds - 1) {
+                // Save current round name
+                saveCurrentRoundName();
+                renderQuestionRound(questionState.currentRoundIndex + 1);
+            }
+        }
+
+        // Save Current Round Name
+        function saveCurrentRoundName() {
+            const roundName = document.getElementById('roundName').value.trim();
+            questionState.rounds[questionState.currentRoundIndex].roundName = roundName;
+        }
+
+        // Finish Question Creation and Start Game
+        function finishQuestionCreation() {
+            saveCurrentRoundName();
+            
+            // Store rounds in game state
+            gameState.rounds = questionState.rounds;
+            
+            // Hide question creation
+            document.getElementById('questionCreationSection').classList.add('hidden');
+            
+            // Start the game
+            startGame();
+        }
+
+        // Save and Exit
+        function saveAndExit() {
+            if (confirm('Save progress and return to setup?')) {
+                saveCurrentRoundName();
+                document.getElementById('questionCreationSection').classList.add('hidden');
+                document.getElementById('setupSection').classList.remove('hidden');
+            }
+        }
+
+        // Start Game
+        function startGame() {
+            // Initialize game state
+            gameState.sessionId = generateSessionId();
+            gameState.currentRound = 1;
+            gameState.gameStarted = true;
+            
+            // Initialize scores
+            gameState.scores = {};
+            gameState.roundHistory = {};
+            gameState.contestants.forEach(name => {
+                gameState.scores[name] = 0;
+                gameState.roundHistory[name] = [];
+            });
+
+            // Save to Firebase or localStorage
+            saveGameState();
+
+            // Update UI
+            document.getElementById('setupSection').classList.add('hidden');
+            document.getElementById('gameSection').classList.remove('hidden');
+            document.getElementById('sessionInfo').classList.remove('hidden');
+            document.getElementById('sessionId').textContent = gameState.sessionId;
+            document.getElementById('totalRoundsDisplay').textContent = gameState.totalRounds;
+            document.getElementById('playersCountDisplay').textContent = gameState.contestants.length;
+
+            // Generate round buttons
+            generateRoundButtons();
+            
+            // Render scoreboard
+            renderScoreboard();
+        }
+
+        // Generate Round Buttons
+        function generateRoundButtons() {
+            const container = document.getElementById('roundSelector');
+            container.innerHTML = '';
+            
+            for (let i = 1; i <= gameState.totalRounds; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'round-btn';
+                btn.textContent = `Round ${i}`;
+                btn.onclick = () => selectRound(i);
+                if (i === gameState.currentRound) {
+                    btn.classList.add('active');
+                }
+                container.appendChild(btn);
+            }
+        }
+
+        // Select Round
+        function selectRound(roundNumber) {
+            gameState.currentRound = roundNumber;
+            document.getElementById('currentRoundDisplay').textContent = roundNumber;
+            
+            // Update active button
+            document.querySelectorAll('.round-btn').forEach((btn, idx) => {
+                if (idx + 1 === roundNumber) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            saveGameState();
+        }
+
+        // Render Scoreboard
+        function renderScoreboard() {
+            const container = document.getElementById('scoreboard');
+            container.innerHTML = '';
+
+            // Sort contestants by score
+            const sortedContestants = [...gameState.contestants].sort((a, b) => {
+                return (gameState.scores[b] || 0) - (gameState.scores[a] || 0);
+            });
+
+            sortedContestants.forEach((name, index) => {
+                const score = gameState.scores[name] || 0;
+                const row = document.createElement('div');
+                row.className = 'player-row';
+                
+                const positionClass = index === 0 ? 'player-position top' : 'player-position';
+                
+                row.innerHTML = `
+                    <div class="${positionClass}">${index + 1}</div>
+                    <div class="player-name">${name}</div>
+                    <div class="player-score">${score}</div>
+                    <div class="score-controls">
+                        <button class="score-btn minus" onclick="adjustScore('${name}', -1)">−</button>
+                        <button class="score-btn plus" onclick="adjustScore('${name}', 1)">+</button>
+                    </div>
+                `;
+                
+                container.appendChild(row);
+            });
+        }
+
+        // Adjust Score
+        function adjustScore(name, delta) {
+            gameState.scores[name] = (gameState.scores[name] || 0) + delta;
+            
+            // Ensure score doesn't go below 0
+            if (gameState.scores[name] < 0) {
+                gameState.scores[name] = 0;
+            }
+
+            // Record in round history
+            if (!gameState.roundHistory[name]) {
+                gameState.roundHistory[name] = [];
+            }
+            gameState.roundHistory[name].push({
+                round: gameState.currentRound,
+                points: delta,
+                timestamp: new Date().toISOString()
+            });
+
+            renderScoreboard();
+            saveGameState();
+        }
+
+        // End Game
+        function endGame() {
+            if (!confirm('Are you sure you want to end the game?')) {
+                return;
+            }
+
+            // Reset state
+            gameState = {
+                sessionId: null,
+                gameTitle: '',
+                contestants: [],
+                currentRound: 1,
+                totalRounds: 5,
+                scores: {},
+                roundHistory: {},
+                gameStarted: false
+            };
+
+            // Update UI
+            document.getElementById('setupSection').classList.remove('hidden');
+            document.getElementById('gameSection').classList.add('hidden');
+            document.getElementById('sessionInfo').classList.add('hidden');
+
+            saveGameState();
+        }
+
+        // Save Game State (Firebase or localStorage)
+        function saveGameState() {
+            if (FIREBASE_ENABLED) {
+                // Firebase save logic
+                saveToFirebase();
+            } else {
+                // localStorage fallback
+                localStorage.setItem('houseOfGamesState', JSON.stringify(gameState));
+            }
+        }
+
+        // Save to Firebase
+        async function saveToFirebase() {
+            if (!gameState.sessionId) return;
+
+            try {
+                const response = await fetch(`${FIREBASE_DATABASE_URL}/games/${gameState.sessionId}.json`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        ...gameState,
+                        lastUpdated: new Date().toISOString()
+                    })
+                });
+
+                if (!response.ok) {
+                    console.error('Failed to save to Firebase');
+                }
+            } catch (error) {
+                console.error('Firebase error:', error);
+            }
+        }
+
+        // Load Game State on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedState = localStorage.getItem('houseOfGamesState');
+            if (savedState) {
+                const loaded = JSON.parse(savedState);
+                if (loaded.gameStarted) {
+                    gameState = loaded;
+                    
+                    // Restore UI
+                    document.getElementById('setupSection').classList.add('hidden');
+                    document.getElementById('gameSection').classList.remove('hidden');
+                    document.getElementById('sessionInfo').classList.remove('hidden');
+                    document.getElementById('sessionId').textContent = gameState.sessionId;
+                    document.getElementById('currentRoundDisplay').textContent = gameState.currentRound;
+                    document.getElementById('totalRoundsDisplay').textContent = gameState.totalRounds;
+                    document.getElementById('playersCountDisplay').textContent = gameState.contestants.length;
+                    
+                    generateRoundButtons();
+                    renderScoreboard();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Leaderboard</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,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">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .refresh-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 20px;
+        }
+
+        .refresh-icon:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(180deg);
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .leaderboard {
+            padding: 30px;
+        }
+
+        .leaderboard-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 15px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .leaderboard-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .leaderboard-position {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--primary-color);
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .leaderboard-position.first {
+            color: #FFD700;
+            font-size: 2.5em;
+        }
+
+        .leaderboard-position.second {
+            color: #C0C0C0;
+            font-size: 2.2em;
+        }
+
+        .leaderboard-position.third {
+            color: #CD7F32;
+            font-size: 2em;
+        }
+
+        .leaderboard-info {
+            flex: 1;
+        }
+
+        .leaderboard-name {
+            font-weight: 600;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .leaderboard-score {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        .leaderboard-score.positive {
+            color: #28a745;
+        }
+
+        .leaderboard-score.negative {
+            color: #dc3545;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .error {
+            text-align: center;
+            padding: 60px 20px;
+            color: #dc3545;
+            font-size: 1.2em;
+        }
+
+        .last-updated {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .leaderboard-position {
+                min-width: 60px;
+                font-size: 1.5em;
+            }
+
+            .leaderboard-position.first {
+                font-size: 2em;
+            }
+
+            .leaderboard-position.second,
+            .leaderboard-position.third {
+                font-size: 1.8em;
+            }
+
+            .leaderboard-name {
+                font-size: 1.2em;
+            }
+
+            .leaderboard-score {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="competitionTitle">Live Leaderboard</h1>
+            <div class="subtitle">Real-time Competition Standings</div>
+            <div class="refresh-icon" onclick="loadLeaderboard()" title="Refresh">🔄</div>
+        </div>
+
+        <div class="stats-bar" id="statsBar" style="display: none;">
+            <div class="stat">
+                <div class="stat-value" id="totalContestants">0</div>
+                <div class="stat-label">Contestants</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="roundsCompleted">0</div>
+                <div class="stat-label">Rounds Completed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="totalRounds">0</div>
+                <div class="stat-label">Total Rounds</div>
+            </div>
+        </div>
+
+        <div class="leaderboard" id="leaderboard">
+            <div class="loading">Loading leaderboard data...</div>
+        </div>
+
+        <div class="last-updated" id="lastUpdated" style="display: none;">
+            Last updated: <span id="updateTime">Never</span>
+        </div>
+    </div>
+
+    <script>
+        const FIREBASE_DATABASE_URL = 'https://gameshowscorer-default-rtdb.firebaseio.com';
+        const FIREBASE_ENABLED = true;
+        let sessionId = null;
+        let refreshInterval = null;
+
+        // Get session ID from URL parameter, default to 'latest'
+        function getSessionId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('session') || 'latest';
+        }
+
+        // Load leaderboard data
+        async function loadLeaderboard() {
+            sessionId = getSessionId();
+            
+            console.log('📊 Loading leaderboard for session:', sessionId);
+
+            try {
+                const response = await fetch(`${FIREBASE_DATABASE_URL}/games/${sessionId}.json`);
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch game data');
+                }
+
+                const gameData = await response.json();
+
+                if (!gameData) {
+                    if (sessionId === 'latest') {
+                        showError('No game in progress. Start a game in the scorer app to see the leaderboard.');
+                    } else {
+                        showError('Game session not found. The game may have ended or the session ID is invalid.');
+                    }
+                    return;
+                }
+
+                displayLeaderboard(gameData);
+            } catch (error) {
+                console.error('Error loading leaderboard:', error);
+                showError('Failed to load leaderboard. Please check your connection and try again.');
+            }
+        }
+
+        // Display leaderboard
+        function displayLeaderboard(gameData) {
+            const leaderboard = document.getElementById('leaderboard');
+            const statsBar = document.getElementById('statsBar');
+            const lastUpdated = document.getElementById('lastUpdated');
+            
+            // Update title
+            document.getElementById('competitionTitle').textContent = gameData.competitionName || 'Live Leaderboard';
+            
+            // Update stats
+            const roundsCompleted = Object.keys(gameData.roundHistory[0] || {}).length;
+            document.getElementById('totalContestants').textContent = gameData.contestants.length;
+            document.getElementById('roundsCompleted').textContent = roundsCompleted;
+            document.getElementById('totalRounds').textContent = gameData.totalRounds;
+            statsBar.style.display = 'flex';
+
+            // Create standings array
+            const standings = gameData.contestants.map((contestant, idx) => ({
+                name: contestant.name,
+                avatar: contestant.avatar,
+                score: gameData.scores[idx] || 0,
+                index: idx
+            }));
+
+            // Sort by score (highest first), then alphabetically by name for ties
+            standings.sort((a, b) => {
+                if (b.score !== a.score) {
+                    return b.score - a.score; // Higher score first
+                }
+                return a.name.localeCompare(b.name); // Alphabetical for same score
+            });
+
+            // Build leaderboard HTML
+            leaderboard.innerHTML = '';
+            
+            if (standings.length === 0) {
+                leaderboard.innerHTML = '<div class="loading">No contestants yet...</div>';
+                return;
+            }
+
+            // Calculate positions with ties
+            let currentPosition = 1;
+            let previousScore = null;
+            let contestantsAtCurrentPosition = 0;
+
+            standings.forEach((contestant, idx) => {
+                // Determine position
+                if (previousScore === null || contestant.score === previousScore) {
+                    // Same score as previous (or first contestant) - share position
+                    contestantsAtCurrentPosition++;
+                } else {
+                    // Different score - move to next position
+                    currentPosition += contestantsAtCurrentPosition;
+                    contestantsAtCurrentPosition = 1;
+                }
+                
+                const rank = currentPosition;
+                previousScore = contestant.score;
+                const scoreClass = contestant.score > 0 ? 'positive' : contestant.score < 0 ? 'negative' : '';
+                const scoreSign = contestant.score > 0 ? '+' : '';
+                
+                let positionClass = '';
+                let medal = '';
+                if (rank === 1) {
+                    positionClass = 'first';
+                    medal = '🥇';
+                } else if (rank === 2) {
+                    positionClass = 'second';
+                    medal = '🥈';
+                } else if (rank === 3) {
+                    positionClass = 'third';
+                    medal = '🥉';
+                }
+                
+                const item = document.createElement('div');
+                item.className = 'leaderboard-item';
+                item.innerHTML = `
+                    <div class="leaderboard-position ${positionClass}">${medal || rank}</div>
+                    <div class="leaderboard-info">
+                        <div class="leaderboard-name">${contestant.name}</div>
+                    </div>
+                    <div class="leaderboard-score ${scoreClass}">${scoreSign}${contestant.score}</div>
+                `;
+                leaderboard.appendChild(item);
+            });
+
+            // Update last updated time
+            document.getElementById('updateTime').textContent = new Date().toLocaleTimeString();
+            lastUpdated.style.display = 'block';
+        }
+
+        // Show error message
+        function showError(message) {
+            const leaderboard = document.getElementById('leaderboard');
+            leaderboard.innerHTML = `<div class="error">${message}</div>`;
+        }
+
+        // Initialize on load
+        window.onload = function() {
+            loadLeaderboard();
+            
+            // Auto-refresh every 5 seconds
+            refreshInterval = setInterval(loadLeaderboard, 5000);
+        };
+
+        // Clear interval on page unload
+        window.onbeforeunload = function() {
+            if (refreshInterval) {
+                clearInterval(refreshInterval);
+            }
+        };
+    </script>
+</body>
+</html>
